@@ -133,3 +133,20 @@ u_name = {}; // object
 // ex. if(null){}, js convert it into false
 // ex. if(-1){}, js convert it into true
 // all --> true
+
+
+// ------------------------------------------------------------------------------
+
+
+// true + false //1 + 0 = 1
+// null + 1 // 0 + 1 = 1
+// "12" + 12 // "12" + "12" = "1212"
+// !!undefined
+// "12" - 1 // 12 - 1 = 11
+// typeof NaN
+// "hello" - 5   // NaN 
+// "hello" + 5   // "hello5" (string concatenation, NOT NaN)
+let x;
+console.log(x);
+let y = null;
+console.log(y);

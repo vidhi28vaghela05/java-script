@@ -63,3 +63,71 @@ Object properties can be changed
 The reference cannot be changed</p>
 </div>
  
+<!-- --------------------------------------------------------------------------- -->
+
+Javascript Datatype:
+
+<h3>Example 1 :</h3>
+<p>true + false </p>
+<p>Answer or Error: Output: 1 </p>
+<p>Why : true → 1
+false → 0
+JavaScript converts booleans to numbers in arithmetic. </p>
+</div>
+ 
+<div>
+<h3>Example 2 :</h3>
+<p>null + 1 </p>
+<p>Answer or Error: Output: 1</p>
+<p>Why : null → 0 (in numeric operations) </p>
+</div>
+ 
+<div>
+<h3>Example 3 :</h3>
+<p>"12" + 12 </p>
+<p>Answer or Error: Output: "1212"</p>
+<p>Why : + with a string performs string concatenation
+Number 12 is converted to string</p>
+</div>
+ 
+<div>
+<h3>Example 4 :</h3>
+<p>!! undefined</p>
+<p>Answer or Error: Output: false</p>
+<p>Why : undefined is a falsy value
+!undefined → true
+!!undefined → false
+!! is used to convert a value to its boolean form.</p>
+</div>
+ 
+<div>
+<h3>Example 5 :</h3>
+<p>"12" - 1 </p>
+<p>Answer or Error: Output: 11</p>
+<p>Why : - operator forces numeric conversion
+"12" → 12</p>
+</div>
+ 
+<div>
+<p> why typeof NaN --> number </p> 
+<p>NaN is a failed number oprations that why that type is number</p>
+<p> ex. "hello" + 5 --> NaN</p>
+<p>Answer or Error: Output: "number"</p>
+<p>Why : NaN means Not a Number
+It is the result of a failed numeric operation
+JavaScript still treats it as a number type</p>
+</div>
+ 
+<div>
+<p>Undefined vs Null</p>
+<p>let x;</p>
+<p>console.log(x);</p>
+<p>Answer or Error: Output: undefined</p>
+<p>Why : Variable is declared but not assigned a value</p>
+<p>let y = null;</p>
+<p>console.log(y);</p>
+<p>Answer or Error: Output: null</p>
+<p>Why : null is an intentional empty value
+Assigned by the programmer</p>
+</div>
+ 
