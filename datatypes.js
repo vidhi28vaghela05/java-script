@@ -119,4 +119,17 @@ u_name = {}; // object
 // ex. "hello" - 5 --> NaN
 
 
+// ------------------------------------------------------------------------------
 
+
+
+// type coearation
+// "5" + 1 // + --> Value Add and Coeration(Mix)
+// "5" - 1
+
+// Truthy vs Falsy Values
+// 0, false, "", null, undefined, NaN, document.all, -- false
+// ex. !!0 -- check value is true and false
+// ex. if(null){}, js convert it into false
+// ex. if(-1){}, js convert it into true
+// all --> true
