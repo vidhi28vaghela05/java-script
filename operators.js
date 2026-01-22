@@ -139,3 +139,24 @@
 
 
 
+// ------------------------------------------------------------------------------
+
+
+
+// Ternary
+// ? :
+
+// condition ? true thase to print thase : false thase to print thase
+// let a = 12 > 13 ? console.log("true") : console.log("false");
+
+
+// typeof null --> object
+// typeof [] --> object, let a = []; a instanceof Array --> true
+
+// instanceof --> check type of reference data type // don't use typeof for reference data type
+
+// typeof NaN --> number
+
+// typeof --> primitive data type mate use karvo
+// instanceof --> reference data type mate use karvo
+
