@@ -200,8 +200,12 @@ let x = 2;
 switch (x) {
     case 2:
         console.log("Two");
+        break;
     case 3:
         console.log("Three");
+        break;
+   default:
+        console.log("Invalid Number.");
 }
 
 
@@ -242,6 +246,14 @@ function rps(player1, player2) {
 
     return player2;
 }
+
+console.log(rps("rock", "scissors"));     // rock
+console.log(rps("paper", "rock"));        // paper
+console.log(rps("scissors", "paper"));    // scissors
+console.log(rps("rock", "paper"));        // paper
+console.log(rps("scissors", "rock"));     // rock
+console.log(rps("rock", "rock"));          // Draw
+
 
 // ---------------------------------------------------------------------------
 
