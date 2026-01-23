@@ -48,3 +48,36 @@ while (d <= 10) {
 //     console.log(k);
 //     k++
 // }
+
+
+// let a = 60;
+// while (k <= 20) {
+//     console.log(a);
+//     a++;
+// }
+
+
+// let c = 30;
+// while (c > 20) {
+//     console.log(c);
+//     a++;
+// }
+
+// let d = "Hello";
+// while (d <= 20) {
+//     console.log(d);
+//     d++;
+// }
+
+// let f = 50;
+// while (f <= 60) {
+//     console.log(f);
+//     f--;
+// }
+
+
+// let q=50;
+// while (q <= 60){
+//     console.log(q);
+//     ++q
+// }
