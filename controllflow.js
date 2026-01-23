@@ -193,7 +193,7 @@ console.log(score1(40)); // Value is less than 60
 
 // ---------------------------------------------------------------------------
 
-
+// example 1
 
 let x = 2;
 
@@ -211,6 +211,7 @@ switch (x) {
 
 // ---------------------------------------------------------------------------
 
+// example 2
 
 function getGrade(score) {
 
@@ -235,6 +236,8 @@ console.log(getGrade(20));   // Fail
 console.log(getGrade(120));  // Invalid Marks
 
 // ---------------------------------------------------------------------------
+
+// example 3
 
 function rps(player1, player2) {
 
