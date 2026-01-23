@@ -527,3 +527,44 @@ console.log("Matched");
 }</p>
 <p></p>
 </div>
+
+
+<!-- --------------------------------------------------------------------------- -->
+
+
+<div>
+<h1>Example 1 :</h1>
+<p>let x = 2;</p>
+<p>switch(x){
+   case 2:
+   console.log("Two");
+   case 3:
+   console.log("Three");
+}</P>
+<div>
+
+
+
+<div>
+<h1>Example 2 :</h1>
+<p>Write a function getGrade(score) that:</p>
+<p> Takes A student's score as input (0 to 100)</P>
+<p>Returns the grade based on below logic:</P>
+<p>90-100 A+</P>
+<p>80-89 A</P>
+<p>70-79 B</P>
+<p>60-69 C</P>
+<p>33-59 D</P>
+<p>0-32 Fail</P>
+<p>Anything Else Invalid Marks</P>
+<div>
+
+
+
+<div>
+<h1>Example 3 :</h1>
+<p>Rock-Paper-Scissors:</p>
+<p>rock - scissors --> rock</P>
+<p>paper - rock --> paper</P>
+<p>scissors - paper --> scissors</P>
+<div>

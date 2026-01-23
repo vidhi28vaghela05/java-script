@@ -190,3 +190,58 @@ console.log(score1(85)); // Value is between 80 and 90
 console.log(score1(72)); // Value is between 70 and 79
 console.log(score1(65)); // Value is between 60 and 69
 console.log(score1(40)); // Value is less than 60
+
+// ---------------------------------------------------------------------------
+
+
+
+let x = 2;
+
+switch (x) {
+    case 2:
+        console.log("Two");
+    case 3:
+        console.log("Three");
+}
+
+
+// ---------------------------------------------------------------------------
+
+
+function getGrade(score) {
+
+    if (score < 0 || score > 100) return "Invalid Marks";
+
+    if (score >= 90) return "A+";
+    if (score >= 80) return "A";
+    if (score >= 70) return "B";
+    if (score >= 60) return "C";
+    if (score >= 33) return "D";
+
+    return "Fail";
+}
+
+
+console.log(getGrade(95));   // A+
+console.log(getGrade(85));   // A
+console.log(getGrade(75));   // B
+console.log(getGrade(65));   // C
+console.log(getGrade(45));   // D
+console.log(getGrade(20));   // Fail
+console.log(getGrade(120));  // Invalid Marks
+
+// ---------------------------------------------------------------------------
+
+function rps(player1, player2) {
+
+    if (player1 === player2) return "Draw";
+
+    if (player1 === "rock" && player2 === "scissors") return "rock";
+    if (player1 === "paper" && player2 === "rock") return "paper";
+    if (player1 === "scissors" && player2 === "paper") return "scissors";
+
+    return player2;
+}
+
+// ---------------------------------------------------------------------------
+
