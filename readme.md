@@ -560,7 +560,6 @@ console.log("Matched");
 <div>
 
 
-
 <div>
 <h1>Example 3 :</h1>
 <p>Rock-Paper-Scissors:</p>
