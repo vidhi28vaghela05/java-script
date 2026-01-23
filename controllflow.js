@@ -140,3 +140,53 @@ switch (userRole) {
     default:
         console.log("Invalid Role");
 }
+
+
+
+// Early Return Pattern
+function score(value) {
+
+    if (value > 90) {
+        return "Value is more than 90";
+    }
+
+    if (value >= 80) {
+        return "Value is between 80 and 90";
+    }
+
+    if (value >= 70) {
+        return "Value is between 70 and 79";
+    }
+
+    if (value >= 60) {
+        return "Value is between 60 and 69";
+    }
+
+    return "Value is less than 60";
+}
+
+
+score(100);
+console.log(score(95)); // Value is more than 90
+console.log(score(85)); // Value is between 80 and 90
+console.log(score(72)); // Value is between 70 and 79
+console.log(score(65)); // Value is between 60 and 69
+console.log(score(40)); // Value is less than 60
+
+
+function score1(value) {
+
+    if (value > 90) return "Value is more than 90";
+    if (value >= 80) return "Value is between 80 and 90";
+    if (value >= 70) return "Value is between 70 and 79";
+    if (value >= 60) return "Value is between 60 and 69";
+
+    return "Value is less than 60";
+}
+
+score1(100);
+console.log(score1(95)); // Value is more than 90
+console.log(score1(85)); // Value is between 80 and 90
+console.log(score1(72)); // Value is between 70 and 79
+console.log(score1(65)); // Value is between 60 and 69
+console.log(score1(40)); // Value is less than 60
