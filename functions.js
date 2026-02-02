@@ -104,3 +104,10 @@ function getValue1(value) {
 let result = getValue1(80);
 console.log(result);
 
+
+// first Class Function
+// function can be treated as variables
+
+// function can be passed as arguments to other functions
+
+// function can be returned from other functions
