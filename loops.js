@@ -38,46 +38,96 @@
 
 let d = 1;
 while (d <= 10) {
-    console.log("While Loop: ", d);
+    console.log("While Loop:", d);
     d++;
 }
 
+
 // make it true loops 
-// let k = 50;
-// while(k=20){
-//     console.log(k);
-//     k++
-// }
+let k = 50;
+while (k <= 60) {
+    console.log(k);
+    k++;
+}
 
 
-// let a = 60;
-// while (k <= 20) {
-//     console.log(a);
-//     a++;
-// }
+
+let a = 10;
+while (a <= 20) {
+    console.log(a);
+    a++;
+}
 
 
-// let c = 30;
-// while (c > 20) {
-//     console.log(c);
-//     a++;
-// }
+let c = 30;
+while (c > 20) {
+    console.log(c);
+    c--;
+}
 
-// let d = "Hello";
-// while (d <= 20) {
-//     console.log(d);
-//     d++;
-// }
-
-// let f = 50;
-// while (f <= 60) {
-//     console.log(f);
-//     f--;
-// }
+let da = 1;
+while (da <= 5) {
+    console.log("Hello");
+    da++;
+}
 
 
-// let q=50;
-// while (q <= 60){
-//     console.log(q);
-//     ++q
-// }
+let f = 50;
+while (f <= 60) {
+    console.log(f);
+    f++;
+}
+
+
+
+let q = 50;
+while (q <= 60) {
+    console.log(q);
+    q++;
+}
+
+// break
+for (let k=1; k<=201; k++) {
+    console.log(k);
+    if (k === 32) {
+        break;
+    }
+}
+
+
+
+// do while loop
+// do {} while (end);
+
+// start
+// do{
+//   code
+//   change
+// } while(end);
+
+let j = 12;  // start
+do {
+    console.log("do while loop:", j); // code
+    j++; // change (condition)
+} while (j < 20); // while check after executing code block (end)
+
+
+// // break
+for (let k = 1; k <= 201; k++) {
+    console.log("Loop with break", k);
+    if (k == "30") {
+        break;
+    }
+}
+
+
+// // continue
+for (let a = 1; a <= 10; a++) {
+    if (a === 5) {
+        continue;
+    }
+    console.log(a);
+}
+
+
+// // for-of, forEach for Arrays
