@@ -179,3 +179,75 @@ abc4()();
 // function abcd(val){} --> higher order function
 
 // function abcd(){ return function(){} } abcd()() --> higher order
+
+// pure vs impure function
+// pure function --> je function same input par same output aapse ane te koi bahar na state ne modify na kare(pure function --> je function bahar na state ne modify na kare )
+let a= 20;
+function change_a(){
+  return "a not change(pure function): " + a;
+} // --> pure function
+console.log(change_a());
+
+// impure function --> je function same input par alag alag output aapse athava te bahar na state ne modify kare(impure function --> je function bahar na state ne modify kare )
+function change_a1(){
+  a++;
+   a++;
+   a+=3;
+  return "a changed(impure function): " + a;
+} // --> impure function
+console.log(change_a1());
+console.log(change_a1());
+
+
+// closure function
+// function je potana parent function na variables ne access kari shake(return thava valo function use karshe parent function na koi variable) (function within function)
+// function outer(){
+//     let outer_var = "Outer Function Variable";
+//     function inner(){
+//         console.log(outer_var);
+//     }
+//     inner();
+// }
+// outer();
+
+// lexical scope --> nested function can access variables declared in their outer scope
+function outer1(){
+    let outer_var = "Outer Function Variable ";
+    function inner1(){
+        console.log(outer_var);
+    let inner_var = "Inner Function Variable ";
+    function most_inner(){
+        console.log(outer_var);
+        console.log(inner_var);
+    }
+    most_inner();
+}
+    inner1();
+}
+outer1();
+
+
+// Hoisting in function
+// use case --> show project structure
+
+temp_fnc();
+
+function temp_fnc(){
+    console.log("hoisting in function")
+}
+// function declaration is hoisted
+
+// temp_fnc1(); // error  
+let temp_fnc1 = function(){
+    console.log("hoisting in function expression")
+};
+temp_fnc1();
+
+// function expression is not hoisted
+
+// temp_fnc2(); // error  
+let temp_fnc2 = () => {
+    console.log("hoisting in arrow function")
+};
+temp_fnc2();
+// arrow function is not hoisted    
