@@ -107,7 +107,75 @@ console.log(result);
 
 // first Class Function
 // function can be treated as variables
+// let fnc = function (){} --> function expression
+// let fnc = {}=> {} --> arrow function
+let buynow1 = function(product, price) {
+  console.log(product,  price)
+}
+buynow1("mobile", 50000);
+let buynow2 = (product, price) => {
+  console.log(product,  price)
+} 
+buynow2("laptop", 90000);
+// covert into arrow function
 
 // function can be passed as arguments to other functions
+// let fnc = function (){} --> function expression
+// fnc(function(){})
+// function abc1(v1){
+//   return v1();
+// }
+
+
+function abc1(v1, v2){
+    console.log(v2);
+    return v1();
+}
+
+abc1(function(){
+  console.log("first class function");
+},"hello");
+
+
+
+function abc2(v1, v2){
+  
+    console.log(v2);
+      return v1();
+}
+
+abc2(function(){
+    console.log("second class function")
+}, "hello")
+
 
 // function can be returned from other functions
+
+function abc3(){
+    return function (){
+        console.log("function within function")
+    }
+}
+
+abc3()();
+
+function abc4(){
+    return () => {
+        console.log("arrow function within function")
+    }
+}
+
+abc4()();
+
+
+
+// higher order function (HOF)
+// function that takes another function as an argument or returns a
+// function as a result (eva function je return kare ek function athava
+// accept kare ek function params ma)
+
+// function abcd(val){ val(); }
+// --> abcd(function(){ console.log("hello") })
+// function abcd(val){} --> higher order function
+
+// function abcd(){ return function(){} } abcd()() --> higher order
