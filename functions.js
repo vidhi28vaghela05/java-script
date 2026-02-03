@@ -251,3 +251,371 @@ let temp_fnc2 = () => {
 };
 temp_fnc2();
 // arrow function is not hoisted    
+
+
+// /* ===============================
+//    Function Examples – Full Code
+//    =============================== */
+
+
+// /* -------- Example 1 --------
+//    Function Declaration vs Expression (Hoisting)
+// */
+
+// greet(); // ✅ Works because function declaration is hoisted
+
+// function greet(){
+//   console.log("Hello");
+// }
+
+// greet(); // ✅ Works
+
+// // ❌ If uncommented below, it will cause error because
+// // greet is already declared above
+
+// // const greet = function(){
+// //   console.log("Hello");
+// // }
+
+
+
+// /* -------- Example 2 --------
+//    Function Hoisting
+// */
+
+// greet(); // ✅ Works due to hoisting
+
+// function greet(){
+//     console.log("Hello!");
+// }
+
+// // Output: Hello!
+
+
+
+// /* -------- Example 3 --------
+//    Normal Function to Arrow Function
+// */
+
+// function add(a, b){
+//     return a + b;
+// }
+
+// // ❌ ERROR:
+// // Identifier 'add' has already been declared
+// // because function add already exists above
+
+// // const add = (a, b) => a + b;
+
+
+
+// /* -------- Example 4 --------
+//    Parameters vs Arguments
+// */
+
+// function welcome(name){ // name → parameter
+//     console.log("Welcome " + name);
+// }
+
+// welcome("user"); // "user" → argument
+
+// // Output: Welcome user
+
+
+
+// /* -------- Example 5 --------
+//    Missing Arguments
+// */
+
+// function temp (a, b, c){
+//     console.log(a, b, c);
+// }
+
+// temp(1, 2);
+
+// // Output: 1 2 undefined
+// // No error because missing arguments become undefined
+
+
+
+// /* -------- Example 6 --------
+//    Default Parameters
+// */
+
+// function temp_user(name = "Guest"){
+//     console.log("Hello " + name);
+// }
+
+// temp_user();
+
+// // Output: Hello Guest
+
+
+
+// /* -------- Example 7 --------
+//    Rest Operator (...)
+// */
+
+// function number(...numbers){
+//     console.log(numbers);
+// }
+
+// number(1, 2, 3, 4, 5);
+
+// // Output: [1, 2, 3, 4, 5]
+// // Rest operator collects arguments into an array
+
+
+
+// /* -------- Example 8 --------
+//    Rest Parameters & Total
+// */
+
+// // ❌ LOGICAL ERROR VERSION (comment only explanation)
+// /*
+// function calculateTotal(...scores){
+//     let total = 0;
+//     for(let i = 0; i <= scores.length; i++){
+//         total += scores[i];
+//     }
+//     return total;
+// }
+// */
+// // Error reason:
+// // i <= scores.length runs one extra time
+// // scores[scores.length] is undefined → NaN
+
+
+// // ✅ CORRECT VERSION (used, output unchanged)
+
+// function calculateTotal(...scores){
+//     let total = 0;
+//     scores.forEach(function(val){
+//         total = total + val;
+//     });
+//     return total;
+// }
+
+// let sumtotal = calculateTotal(10, 20, 30, 40, 50);
+
+// // sumtotal = 150
+
+
+
+// /* -------- Example 9 --------
+//    Early Return (not applied, only explanation)
+// */
+
+// function checkAge(age){
+//     if(age < 18){
+//         console.log("Too Young");
+//     } else {
+//         console.log("Access Granted");
+//     }
+// }
+
+// // Can be optimized using early return
+// // but output remains same as per question
+
+
+
+// /* -------- Example 10 --------
+//    Return Value
+// */
+
+// function f(){ 
+//     return;
+// }
+
+// // Return value is undefined
+
+
+
+
+/*************************
+ Example 1
+ Difference between function declaration & expression (hoisting)
+*************************/
+
+// Function Declaration → hoisted
+greet(); // works
+function greet(){
+  console.log("Hello");
+}
+greet(); // works
+
+// OUTPUT:
+// Hello
+// Hello
+
+// ❌ Function Expression (not hoisted)
+// Uncommenting below will cause error if called before definition
+// const greet = function(){
+//   console.log("Hello");
+// }
+
+
+
+/*************************
+ Example 2
+*************************/
+
+greet(); // works because function declaration is hoisted
+
+function greet(){
+    console.log("Hello!");
+}
+
+// OUTPUT:
+// Hello!
+
+
+
+/*************************
+ Example 3
+ Convert normal function to arrow function
+*************************/
+
+// ❌ ERROR: Identifier 'add' has already been declared
+// function add(a, b){
+//     return a + b;
+// }
+
+// const add = (a, b) => a + b;
+
+// ✅ Correct way (use only ONE)
+const add = (a, b) => a + b;
+console.log(add(2, 3));
+
+// OUTPUT:
+// 5
+
+
+
+/*************************
+ Example 4
+ Parameters vs Arguments
+*************************/
+
+function welcome(name){ // name → parameter
+    console.log("Welcome " + name);
+}
+
+welcome("user"); // "user" → argument
+
+// OUTPUT:
+// Welcome user
+
+
+
+/*************************
+ Example 5
+ Missing arguments
+*************************/
+
+function temp (a, b, c){
+    console.log(a, b, c);
+}
+
+temp(1, 2);
+
+// OUTPUT:
+// 1 2 undefined
+// ❌ No error → missing argument becomes undefined
+
+
+
+/*************************
+ Example 6
+ Default parameter
+*************************/
+
+function temp_user(name = "Guest"){
+    console.log("Hello " + name);
+}
+
+temp_user();
+
+// OUTPUT:
+// Hello Guest
+
+
+
+/*************************
+ Example 7
+ Rest operator
+*************************/
+
+function number(...numbers){
+    console.log(numbers);
+}
+
+number(1, 2, 3, 4, 5);
+
+// OUTPUT:
+// [1, 2, 3, 4, 5]
+// ...numbers collects arguments into an array
+
+
+
+/*************************
+ Example 8
+ Rest parameters + total
+*************************/
+
+// ❌ WRONG LOOP (kept as comment – causes NaN)
+// for(let i = 0; i <= scores.length; i++)
+
+// ✅ Correct function
+function calculateTotal(...scores){
+    let total = 0;
+    scores.forEach(function(val){
+        total = total + val;
+    });
+    return total;
+}
+
+let sumtotal = calculateTotal(10, 20, 30, 40, 50);
+console.log(sumtotal);
+
+// OUTPUT:
+// 150
+
+
+
+/*************************
+ Example 9
+ Early return
+*************************/
+
+// Original (works but not optimized)
+function checkAge(age){
+    if(age < 18){
+        console.log("Too Young");
+    } else {
+        console.log("Access Granted");
+    }
+}
+
+checkAge(16);
+checkAge(21);
+
+// OUTPUT:
+// Too Young
+// Access Granted
+
+
+
+/*************************
+ Example 10
+ Return value
+*************************/
+
+function f(){ 
+    return;
+}
+
+console.log(f());
+
+// OUTPUT:
+// undefined

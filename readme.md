@@ -722,3 +722,125 @@ for(let i =1; i<=100; i++){
 }
 </p>
 </div>
+
+
+
+
+
+
+
+
+<!-- --------------------------------------------------------------------------- -->
+
+
+
+
+
+## Function Examples
+<hr>
+<div>
+<h1> Example 1: </h1>
+<p>What's the difference between function declaration and function expression in terms of hoisting?</p>
+<p>Function declarations are stored in memory during the creation phase, expressions are not.</p>
+</div>
+
+<div>
+<h1> Example 2: </h1>
+<p>greet();</p>
+<p>function greet(){
+    console.log("Hello!");
+}</p>
+<p>Ans or Err and Why</p>
+</div>
+
+<div>
+<h1> Example 3: </h1>
+<p>Convert normal function to Arrow Function</p>
+<p>function add(a, b){
+    return a + b;
+}</p>
+<p>Ans And How</p>
+</div>
+
+<div>
+<h1> Example 4: </h1>
+<p>Identify what is parms and what is args</p>
+<p>function welcome(name){
+    console.log("Welcome " + name);
+}</p>
+<p>welcome("user");</p>
+<p>Ans and why</p>
+</div>
+
+<div>
+<h1> Example 5: </h1>
+<p>how many parameters and args</p>
+<p>function temp (a, b, c){
+    console.log(a,b,c);
+}</p>
+<p>temp(1, 2)</p>
+<p> Ans, Err and Why</p>
+</div>
+
+<div>
+<h1> Example 6: </h1>
+<p>Predict the output</p>
+<p>function temp_user(name = "Guest"){
+    console.log("Hello " + name);
+}</p>
+<p>temp_user();</p>
+<p>Ans, Err and Why</p>
+</div>
+
+<div>
+<h1> Example 7: </h1>
+<p>what is ... operator and why use it  in function</p>
+<p>function number(...numbers){
+    console.log(numbers);
+}</p>
+<p>number(1, 2, 3, 4, 5)</p>
+<p>Ans, Err and why</p>
+</div>
+
+<div>
+<h1> Example 8: </h1>
+<p>Use rest Parameters to accept any number of scores and return the total</p>
+<p>function calculateTotal(...scores){
+    let total = 0;
+    for(let i=0; i<=scores.length; i++){
+        total += scores[i];
+    }
+    return total;
+}</p>
+<p>function calculateTotal(...scores){
+    let total = 0;
+    scores.forEach(function(val){
+        total = total + val;
+    });
+    return total;
+}</p>
+<p>calculateTotal(10, 20 ,30 ,40 ,50)</p>
+<p>let sumtotal = calculateTotal(10, 20 ,30 ,40 ,50)</p>
+<p>Ans, Err and Why</p>
+</div>
+
+<div>
+<h1> Example 9: </h1>
+<p>Fix the function using early return</p>
+<p>function checkAge(age){
+    if(age < 18){
+        console.log("Too Young");
+    } else {
+        console.log("Access Granted");
+    }
+}</p>
+<p>Ans And how</p>
+</div>
+
+<div>
+<h1> Example 10: </h1>
+<p>What is the return value of above function</p>
+<p>function f(){ return;}</p>
+<p>Ans and Why</p>
+</div>
+
