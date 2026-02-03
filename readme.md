@@ -844,3 +844,123 @@ for(let i =1; i<=100; i++){
 <p>Ans and Why</p>
 </div>
 
+
+
+
+
+<!-- --------------------------------------------------------------------------- -->
+
+
+
+
+<div>
+<h1> Example 11: </h1>
+<p>What does is mean when we say "functions are first-class citizens"?</p>
+<p>Ans and Why </p>
+</div>
+
+<div>
+<h1> Example 12: </h1>
+<p>Can You assign a function to a variable and then all it?</p>
+<p>let a = function(){console.log("Hello");}</p>
+<p>a();</p>
+</div>
+
+<div>
+<h1> Example 13: </h1>
+<p>Pass A function into anthor funtion and excute it inside.</p>
+<p>Ans and Why, How</p>
+<p>function abcd(val){val()}</p>
+<p>abcd(function(){ console.log("Hello")})</p>
+</div>
+
+<div>
+<h1> Example 14: </h1>
+<p>What is higer order function?</p>
+<p>Ans and Why</p>
+</div>
+
+<div>
+<h1> Example 16: </h1>
+<p>pure or impure function?</p>
+<p>let a = 5;</p>
+<p>function num(num){
+total += num;
+}
+<p>num(3);</p>
+<p>Ans and Why</p>
+</div>
+
+<div>
+<h1> Example 17: </h1>
+<p>convert example 16 function into pure function?</p>
+<p>Ans and how</p>
+</div>
+
+<div>
+<h1> Example 18: </h1>
+<p>What is Closure? When is it created?</p>
+<p>Ans and Example</p>
+</div>
+
+<div>
+<h1> Example 19: </h1>
+<p>What's logged?</p>
+<p>function outer(){
+    let count = 0;
+    return function(){
+        count++;
+        console.log(count);
+    };
+}</p>
+<p>const counter = outer();</p>
+<p>counter();</p>
+<p>counter();</p>
+<p>Ans, Err and Why</p>
+</div>
+
+<div>
+<h1> Example 20: </h1>
+<p>Convert below function into an IIFE:</p>
+<p>function init(){
+    console.log("Initialized");
+}</p>
+<p>Ans and Why</p>
+</div>
+
+<div>
+<h1> Example 21: </h1>
+<p>What is the use of IIFE? Name one real-world use case.</p>
+<p>let fun=(function(){
+    let score = 0; // this is private variable
+    return{
+        getScore: function(){
+            console.log(score);
+        },
+        setScore: function(val){
+            score = val;
+        }
+    }
+})()</p>
+<p>Ans and Why</p>
+</div>
+
+<div>
+<h1> Example 22: </h1>
+<p>What will be the output here and why?</p>
+<p>temp_var();</p>
+<p>var temp_var = function(){
+    console.log("Hello");
+}</p>
+<p>Ans and Why</p>
+</div>
+
+<div>
+<h1> Example 23: </h1>
+<p>What will be the output here and why?</p>
+<p>temp_var();</p>
+<p>function temp_var(){
+    console.log("Hello");
+}</p>
+<p>Ans and Why</p>
+</div>

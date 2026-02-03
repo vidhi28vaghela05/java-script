@@ -619,3 +619,270 @@ console.log(f());
 
 // OUTPUT:
 // undefined
+
+
+/*************************
+ Example 11
+ Functions as First-Class Citizens
+*************************/
+
+// ✔️ Meaning:
+// Functions can be:
+// 1. Assigned to variables
+// 2. Passed as arguments
+// 3. Returned from other functions
+
+// OUTPUT (conceptual):
+// Functions behave like normal values in JavaScript
+
+
+
+/*************************
+ Example 12
+ Assign function to variable and call it
+*************************/
+
+let am = function(){
+    console.log("Hello");
+};
+
+am();
+// OUTPUT:
+// Hello
+
+
+
+/*************************
+ Example 13
+ Pass function into another function
+*************************/
+
+function abcd(val){
+    val; // executing passed function
+}
+
+abcd(function(){
+    console.log("Hello");
+});
+
+// OUTPUT:
+// Hello
+
+// ✔️ Why:
+// Function is passed as argument → executed inside another function
+
+
+
+/*************************
+ Example 14
+ Higher Order Function
+*************************/
+
+// ✔️ Definition:
+// A function that takes another function as argument
+// OR returns a function
+
+function higherOrder(fn){
+    fn();
+}
+
+higherOrder(function(){
+    console.log("I am callback");
+});
+
+// OUTPUT:
+// I am callback
+
+
+
+/*************************
+ Example 16
+ Pure or Impure function?
+*************************/
+
+let total = 5;
+
+function num(num){
+    total += num; // modifies external variable
+}
+
+num(3);
+console.log(total);
+
+// OUTPUT:
+// 8
+
+// ❌ This is an IMPURE function
+// Why:
+// Depends on & modifies external variable
+
+
+
+/*************************
+ Example 17
+ Convert impure into pure function
+*************************/
+
+function pureNum(total, num){
+    return total + num;
+}
+
+let results = pureNum(5, 3);
+console.log(results);
+
+// OUTPUT:
+// 8
+
+// ✔️ Pure function
+// Same input → same output
+// No external state used
+
+
+
+/*************************
+ Example 18
+ Closure
+*************************/
+
+// ✔️ Definition:
+// Closure is when a function remembers variables
+// from its lexical (parent) scope even after parent execution
+
+function outer(){
+    let msg = "Hello Closure";
+    return function inner(){
+        console.log(msg);
+    };
+}
+
+const closureFun = outer();
+closureFun();
+
+// OUTPUT:
+// Hello Closure
+
+
+
+/*************************
+ Example 19
+ Closure counter
+*************************/
+
+function outer(){
+    let count = 0;
+    return function(){
+        count++;
+        console.log(count);
+    };
+}
+
+const counter = outer();
+counter();
+counter();
+
+// OUTPUT:
+// 1
+// 2
+
+// ✔️ Why:
+// count is preserved due to closure
+// ❌ No error
+
+
+
+/*************************
+ Example 20
+ Convert function into IIFE
+*************************/
+
+// Normal function
+// function init(){
+//     console.log("Initialized");
+// }
+
+// IIFE version
+(function(){
+    console.log("Initialized");
+})();
+
+// OUTPUT:
+// Initialized
+
+// ✔️ Why:
+// Executes immediately without calling
+
+
+
+/*************************
+ Example 21
+ Use of IIFE (private variables)
+*************************/
+
+let fun = (function(){
+    let score = 0; // private variable
+
+    return{
+        getScore: function(){
+            console.log(score);
+        },
+        setScore: function(val){
+            score = val;
+        }
+    };
+})();
+
+fun.getScore();
+fun.setScore(100);
+fun.getScore();
+
+// OUTPUT:
+// 0
+// 100
+
+// ✔️ Why:
+// Data encapsulation
+// Avoid global pollution
+
+
+
+/*************************
+ Example 22
+ Function expression hoisting
+*************************/
+
+// ❌ ERROR if uncommented
+// temp_var();
+
+var temp_var = function(){
+    console.log("Hello");
+};
+
+// ✔️ Correct call
+temp_var();
+
+// OUTPUT:
+// Hello
+
+// Why:
+// var is hoisted as undefined
+// function expression is NOT hoisted
+
+
+
+/*************************
+ Example 23
+ Function declaration hoisting
+*************************/
+
+temp_var2();
+
+function temp_var2(){
+    console.log("Hello");
+}
+
+// OUTPUT:
+// Hello
+
+// ✔️ Why:
+// Function declaration is fully hoisted
+
