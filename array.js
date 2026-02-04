@@ -91,6 +91,13 @@ h.sort();
 //     return a - b; // ascending order
 // })
 
+// let h = [11, 62, 3, 4, 25];
+
+// let sr = h.sort((a, b) => {
+//     return b - a; // decending order
+// })
+
+// use case -- sort product price low to high
 
 
 
