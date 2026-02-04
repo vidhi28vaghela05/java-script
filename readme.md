@@ -968,156 +968,133 @@ total += num;
 
 <!-- --------------------------------------------------------------------------- -->
 
-
-
-// Q1. push()
-// You are building a to-do app. Add a new task 'Buy milk' to the tasks array.
-let tasks = ['Wake up', 'Brush teeth'];
-
-
-
-
-// Q2. pop()
-// Remove the last notification from the notifications array.
-let notifications = ['Email', 'Message', 'Reminder'];
-
-
-
-
-// Q3. shift()
-// A queue system removes the first customer. Remove the first customer.
-let customers = ['Customer1', 'Customer2', 'Customer3'];
-
-
-
-
-// Q4. unshift()
-// A new song is added to the beginning of the playlist.
-let playlist = ['Song B', 'Song C'];
-
-
-
-
-// Q5. splice()
-// In a classroom list, remove 'Alex' and add 'John' and 'Sara' in the same position.
-let students = ['Mike', 'Alex', 'Emma', 'Sophia'];
-
-
-
-
-// Q6. splice()
-// From the menu, remove 2 items starting from index 1.
-let menu = ['Burger', 'Pizza', 'Pasta', 'Salad'];
-
-
-
-
-// Q7. slice()
-// Create a new array that contains only weekend days.
-let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-
-
-
-
-// Q8. reverse()
-// Reverse the order of levels in a game.
-let levels = ['Easy', 'Medium', 'Hard'];
-
-
-
-
-// Q9. sort()
-// Sort the scores in ascending order.
-let scores = [45, 12, 78, 34, 89];
-
-
-
-// Q10. sort() with numbers
-// Sort the prices from lowest to highest.
-let prices = [199, 49, 999, 299, 149];
-
-
-
-
-// Q11. slice() vs splice()
-// From the array, create a new array of the first 3 items WITHOUT changing the original array.
-let products = ['Laptop', 'Phone', 'Tablet', 'Monitor', 'Keyboard'];
-
-
-
-
-// Q12. splice() complex
-// In the array below:
-// 1. Remove 'Blue'
-// 2. Add 'Purple' and 'Orange' at the same position
-let colors = ['Red', 'Green', 'Blue', 'Yellow'];
-ans:colors.splice(2, 1, 'Purple', 'Orange')
-
-
-// Q13. reverse() + push()
-// Reverse the array and then add 'Final Step' at the end.
-let steps = ['Step 1', 'Step 2', 'Step 3'];
-
-
-// Q14. sort() strings
-// Sort names alphabetically, ignoring case sensitivity.
-let names = ['alice', 'Bob', 'charlie', 'David'];
-ans: names.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
-
-
-
-
-// Q15. Combination Question
-// You are managing a movie watchlist:
-// 1. Add 'Inception'
-// 2. Remove the first movie
-// 3. Sort the list alphabetically
-let movies = ['Avatar', 'Titanic', 'Gladiator'];
-
-// Q16. splice() return value
-// What does the splice method return in this case?
-let nums1 = [1, 2, 3, 4];
-nums1.splice(1, 2);
-
-
-
-
-// Q17. slice() immutability check
-// After executing slice, does the original array change?
-let nums2 = [10, 20, 30, 40];
-let result = nums2.slice(1, 3);
-
-
-// Q19. reverse() mutation
-// After reversing, what happens to the original array reference?
-let letters = ['a', 'b', 'c'];
-let reversedLetters = letters.reverse();
-
-
-// Q21. splice() edge case
-// What happens if deleteCount is 0?
-let arr = ['x', 'y', 'z'];
-arr.splice(1, 0, 'new');
-
-
-
-// Q23. slice() negative index
-// What elements are returned?
-let values = [100, 200, 300, 400, 500];
-let sliced = values.slice(-3, -1);
-
-
-
-
-// Q24. splice() vs slice() decision
-// Which method would you use if you want to:
-// a) Update the original array
-// b) Keep the original array unchanged
-
-
-
-
-// Q25. Chained methods (brain teaser)
-// What is the final value of arr?
-let arr2 = [1, 2, 3];
-arr2.push(arr2.shift());
+Q1. push()
+Question: Add a new task 'Buy milk' to the tasks array.
+Code: tasks.push('Buy milk')
+Answer: ['Wake up', 'Brush teeth', 'Buy milk']
+Why: push() adds an element to the end of the array.
+
+Q2. pop()
+Question: Remove the last notification.
+Code: notifications.pop()
+Answer: ['Email', 'Message']
+Why: pop() removes the last element of the array.
+
+Q3. shift()
+Question: Remove the first customer.
+Code: customers.shift()
+Answer: ['Customer2', 'Customer3']
+Why: shift() removes the first element of the array.
+
+Q4. unshift()
+Question: Add a song at the beginning of the playlist.
+Code: playlist.unshift('Song A')
+Answer: ['Song A', 'Song B', 'Song C']
+Why: unshift() adds an element at the start of the array.
+
+Q5. splice()
+Question: Remove 'Alex' and add 'John' and 'Sara'.
+Code: students.splice(1, 1, 'John', 'Sara')
+Answer: ['Mike', 'John', 'Sara', 'Emma', 'Sophia']
+Why: splice() can remove and insert elements at a specific index.
+
+Q6. splice()
+Question: Remove 2 items from index 1.
+Code: menu.splice(1, 2)
+Answer: ['Burger', 'Salad']
+Why: Removes two elements starting at index 1.
+
+Q7. slice()
+Question: Get weekend days.
+Code: days.slice(5, 7)
+Answer: ['Saturday', 'Sunday']
+Why: slice() returns a new array without modifying the original.
+
+Q8. reverse()
+Question: Reverse levels.
+Code: levels.reverse()
+Answer: ['Hard', 'Medium', 'Easy']
+Why: reverse() mutates the array by reversing its order.
+
+Q9. sort()
+Question: Sort scores ascending.
+Code: scores.sort((a, b) => a - b)
+Answer: [12, 34, 45, 78, 89]
+Why: Numeric sorting requires a compare function.
+
+Q10. sort() with numbers
+Question: Sort prices ascending.
+Code: prices.sort((a, b) => a - b)
+Answer: [49, 149, 199, 299, 999]
+Why: Default sort converts numbers to strings; compare function is required.
+
+Q11. slice() vs splice()
+Question: First 3 products without changing original.
+Code: products.slice(0, 3)
+Answer: ['Laptop', 'Phone', 'Tablet']
+Why: slice() does not mutate the original array.
+
+Q12. splice() complex
+Question: Remove 'Blue', add 'Purple' and 'Orange'.
+Code: colors.splice(2, 1, 'Purple', 'Orange')
+Answer: ['Red', 'Green', 'Purple', 'Orange', 'Yellow']
+Why: splice() removes 1 element and inserts 2 at the same index.
+
+Q13. reverse() + push()
+Question: Reverse steps and add 'Final Step'.
+Code: steps.reverse(); steps.push('Final Step')
+Answer: ['Step 3', 'Step 2', 'Step 1', 'Final Step']
+Why: reverse() changes order; push() adds at the end.
+
+Q14. sort() strings
+Question: Sort names alphabetically ignoring case.
+Code: names.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
+Answer: ['alice', 'Bob', 'charlie', 'David']
+Why: Case-insensitive sorting using toLowerCase().
+
+Q15. Combination
+Question: Add 'Inception', remove first, sort alphabetically.
+Code: movies.push('Inception'); movies.shift(); movies.sort()
+Answer: ['Gladiator', 'Inception', 'Titanic']
+Why: Each step performs one operation in sequence.
+
+Q16. splice() return value
+Question: What does splice return?
+Code: nums1.splice(1, 2)
+Answer: [2, 3]
+Why: splice() returns the removed elements.
+
+Q17. slice() immutability
+Question: Does slice change the original?
+Code: nums2.slice(1, 3)
+Answer: [20, 30]
+Why: Original array remains unchanged.
+
+Q19. reverse() mutation
+Question: Effect on original reference?
+Code: let reversedLetters = letters.reverse()
+Answer: ['c', 'b', 'a']
+Why: reverse() mutates the original array; same reference is returned.
+
+Q21. splice() edge case
+Question: deleteCount = 0
+Code: arr.splice(1, 0, 'new')
+Answer: ['x', 'new', 'y', 'z']
+Why: Only insertion occurs, no deletion.
+
+Q23. slice() negative index
+Question: Return elements with negative index.
+Code: values.slice(-3, -1)
+Answer: [300, 400]
+Why: Negative indexes count from the end.
+
+Q24. splice() vs slice()
+Question: Update original or keep unchanged?
+Answer: splice() → updates original, slice() → keeps original unchanged.
+Why: splice() mutates, slice() is immutable.
+
+Q25. Chained methods
+Question: What is final array?
+Code: arr2.push(arr2.shift())
+Answer: [2, 3, 1]
+Why: shift() removes first element and push() appends it at the end.
