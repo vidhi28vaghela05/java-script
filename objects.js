@@ -26,7 +26,7 @@ user.email;
 // user.first-name;
 
 // variable_name['key'];
-user['name'];
+// user['name'];
 
 // user[first_name]
 
