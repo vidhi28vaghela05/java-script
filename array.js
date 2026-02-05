@@ -320,6 +320,162 @@ let laptops_price = [15000, 20000, 30000, 65000, 99000, 45000];
 let expensive_laptops = laptops_price.filter((price) => {
     if (price > 30000) return true;
 });
+console.log(expensive_laptops)
 
 // je value 30000 thi vadhare chhe te new array ma
 // add thase and biji value ne array ma add nahi kare
+// use case -- data ma thi specific data new array ma store karvo hoy based on condition
+// ex. product ma thi specific price na product new array ma store karva hoy
+// if you want to show only expensive product on your homepage
+
+// if you want to filter product based on price
+
+let  product_name= ["mobile", "laptop","tablet", "keypad phone","monitor"];
+
+let  all_product= product_name.filter((type) => {
+    if (type ==="mobile" || type==="monitor") 
+        return true;
+});
+console.log(all_product)
+
+//reduce
+// reduce tyare j use karvu ke jare ek single value calculate karvi hoy from array
+
+let total_price = [10, 68, 45, 58, 52, 48];
+
+let final_price = total_price.reduce((accumulator, val) => {
+    return accumulator + val;
+}, 0); // intial value of accumulator
+
+// 0 + 10 => 10
+// 10 + 68 => 78
+// 78 + 45 => 123
+
+console.log("final price : ", final_price)
+// accumulator --> je value function ma return thase
+// accumulator --> je value function ma return thase accumulator ma store thase --> accumulator name chnage kari sako chho
+//val--> array ni darek value
+//use casw --data ma thik k single value calculate karvi hoy
+//ex.product ma thi total price calculate karvi hoy 
+
+  
+// find
+// find tyare j use karvu ke jare array mathi ek value find karvi hoy based on condition
+
+// find() return kare chhe array no element --> callback no return value par thi
+// never returns what you return inside it
+// returns the array element itself
+// .find() stops at the first match
+// It does not continue looping
+
+let product = ["Laptop", "Mobile", "Tablet",
+"Desktop", "Smart Watch"];
+
+let find_product = product.find(function (item) {
+    if(item === "Tablet"){
+        return true;
+    }else if (item==="mobile"){
+        return true;
+    }
+    else {
+        return false;
+        //console.log("cant find product";) not working
+    }
+    }
+    
+);
+
+// use case -- data ma thi ek value find karvi hoy
+// based on condition
+
+// ex. producat ma thi specific producat find karvo
+// hoy based on name
+
+// find vs filter
+// Real-life Scenario: Shopping Mall Security
+// your are a security guard at a shopping mall
+// check the list of visitors
+let people = ["John", "Sara", "Mike", "Anna",
+"David", "Sara"];
+
+// find ---> you are looking for the first person
+// named "Sara" in the list and stop searching (Pehli
+
+// var j male, bas e j and Anagal check ij na kare)
+let person = people.find((name) => name === "Sara");
+console.log(person);
+//filter --> you want to find all visitors named "sara" in the list (all data check kare and list na end sudhi check kare)
+let Allsara = people.filter((name) => name === "Sara");
+console.log(Allsara);
+//eaxmple 2: books bus for travel
+
+// some
+// check kare chhe ke array ma koi pan ek item condition satisfy kare chhe ke nahi
+
+// condition true aave tyare stop kare
+// some() vs find() --> some() can't return you valueits return true or false, find() return value of array
+// give ans in true and false
+
+let marks1 = [10, 20, 35, 90];
+let any= marks1.some(function (val) {
+    if (val > 85) return true;
+    // if (val < 85) return "need improvement";
+});
+
+// use case -- check if some product are out of stock in you cart
+// every
+// check kare chhe ke array ma baddha j items
+// condition satisfy kare chhe ke nahi
+// true -- baha items condition match kare
+// false -- ek pan fail thay to
+
+let def = [20, 30, 40, 50];
+let num = def.every(function(val){
+    return val < 60;
+})
+
+// use case --> check all student is pass or not
+
+// some(), find(), filter(), every()
+// let products = ["Tablet", "Mobile", "Laptop", "Mobile"]
+
+
+// use case --> check all student is pass or not
+
+// some(), find(), filter(), every()
+
+// let products = ["Tablet", "Mobile", "Laptop","Mobile"]
+
+// method --> condition --> output
+
+// .some()   --> item === "Mobile" --> true
+// .find()   --> item === "Mobile" --> "Mobile"
+// .filter() --> item === "Mobile" --> ["Mobile",
+// "Mobile"]
+
+// .every()  --> item === "Mobile" --> false
+
+// Destructuring operator -- give value to variable
+// (ex. we don't use everytime arr[1], just save it
+// into variable let j, k) = arr1)
+
+let arr4 = [1, 2, 3, 4, 5]
+let [ja, k] = arr4; // --> desthucturing
+// let [ja, , k] = arr;
+
+console.log(k);
+
+let user_data=["text","text@gmail.com","Male","Surat"]
+let [, , jb] = user_data; 
+console.log(jb)
+
+
+// spread oprator -- copy value from main array
+let arr8 = [1, 2, 3, 4, 5, 6, 7];
+
+// let arr4 = arr3;  // - just give reference not copy value (when you change into arr4 that will be change arr3 too)
+
+let arr9 = [...arr8];
+
+// ... --> rest --> into function
+// ... --> spred --> into Array
