@@ -257,3 +257,69 @@ console.log('Q24: splice() -> update original, slice() -> keep original');
 let arr2 = [1, 2, 3];
 arr2.push(arr2.shift());
 console.log('Q25:', arr2);
+
+
+
+
+// ---------------------------------------------------------------------------
+
+
+
+//FOR EACH Loop
+// //FOR EACH --ARRAY NI DAREK VALUE MATE LOOP CHALSE 
+let i=[10,35,40,68];
+i.forEach((val)=>{
+    let new_val=val+10;
+    console.log(new_val);
+
+});
+[5,58,42,"hello"].forEach(val =>
+{
+    let new_arr=val+2;
+    console.log(new_arr)
+}
+)
+// .map() method:
+//map tyare j use karvu ke jyare ek new array create karvo chhe 
+// first map create a balck array --only for  understanding
+let data = [10, 20, 50, 40, 15];
+
+// same like a for each loop but map return a new array
+let temp_data = data.map((val) => {
+// when undefined na lavu hoy tyare filter use karvu
+    // let temp_data = data.filter((val) => {
+    if (val > 20) {
+        return val;
+    }
+});
+
+// use case -- data ma thi specific data new array ma store karvo hoy
+// ex. product ma thi specific category na product
+// new array ma store karva hoy
+
+
+// if you want to show only electronics producat on
+// your homepage
+let marks = [10, 5, 20, 25, 15]
+let final_marks = marks.map((val) => {
+    if (val == 5) {
+        return val + 4;
+    }
+    return val;
+})
+console.log(final_marks)
+
+// filter
+// filter tyare use karvu ke jyare ek new array create karvo chhe with condition
+// in return true/false
+// if true  --> add into new array
+// if else(false) --> not add into new array
+
+let laptops_price = [15000, 20000, 30000, 65000, 99000, 45000];
+
+let expensive_laptops = laptops_price.filter((price) => {
+    if (price > 30000) return true;
+});
+
+// je value 30000 thi vadhare chhe te new array ma
+// add thase and biji value ne array ma add nahi kare
