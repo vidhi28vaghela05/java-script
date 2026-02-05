@@ -9,3 +9,29 @@
 // create
 // varabile = {}
 // key : value --> key-value sturcture
+
+let user ={
+    name:"Test",
+    email:"test@gmail.com",
+    rollno:7
+}
+
+
+// access (dot vs square notation)
+
+// variable_name.key;
+user.name;
+user.email;
+
+// user.first-name;
+
+// variable_name['key'];
+user['name'];
+
+// user[first_name]
+
+// let demo = "name"
+
+// user[demo] --> convert into name (demo = 'name')
+
+// --> output: abc
