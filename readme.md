@@ -1229,10 +1229,544 @@ const messages = balances.map(balance =>
   `Your balance is ₹${balance}`
 );
 
+<!-- --------------------------------------------------------------------------- -->
+
+
+### 1. Get even numbers **Real life:** Find even roll numbers
+js
+const numbers = [1, 2, 3, 4, 5, 6];
+const evenNumbers = numbers.filter(num => num % 2 === 0);
+--- ### 2. Filter adults **Real life:** Allow only 3+ users
+js
+const ages = [2, 1, 10, 16, 5];
+function isAdult(age) {
+  return age >= 18;
+}
+const adults = ages.filter(isAdult);
+--- ### 3. Remove empty items **Real life:** Clean user input
+js
+const inputs = ['Hello', '', 'World', '', 'JS'];
+const validInputs = inputs.filter(text => text !== '');
+--- ### 4. Filter passing marks **Real life:** Exam result system
+js
+const marks = [35, 72, 88, 40, 25];
+const passedStudents = marks.filter(mark => mark >= 40);
+--- ### 5. Get affordable prices **Real life:** Shopping app price filter
+js
+const prices = [199, 499, 999, 1499, 299];
+const affordable = prices.filter(price => price <= 500);
+--- ### 6. Filter long words **Real life:** Search keyword validation
+js
+const words = ['hi', 'hello', 'javascript', 'ok'];
+function isLongWord(word) {
+  return word.length > 3;
+}
+const longWords = words.filter(isLongWord);
+### 7. Filter positive numbers **Real life:** Bank transaction validation
+js
+const transactions = [200, -100, 500, -50, 300];
+const credits = transactions.filter(amount => amount > 0);
+--- ### 8. Filter numbers within a range **Real life:** Score selection
+js
+const scores = [45, 60, 85, 30, 90];
+const selectedScores = scores.filter(score => score >= 50 && score <= 90);### 1. Get even numbers
+**Real life:** Find even roll numbers
+js const numbers = [1, 2, 3, 4, 5, 6]; const evenNumbers = numbers.filter(num => num % 2 === 0);
+---
+
+### 2. Filter adults
+**Real life:** Allow only 3+ users
+js const ages = [2, 1, 10, 16, 5]; function isAdult(age) { return age >= 18; } const adults = ages.filter(isAdult);
+---
+
+### 3. Remove empty items
+**Real life:** Clean user input
+js const inputs = ['Hello', '', 'World', '', 'JS']; const validInputs = inputs.filter(text => text !== '');
+---
+
+### 4. Filter passing marks
+**Real life:** Exam result system
+js const marks = [35, 72, 88, 40, 25]; const passedStudents = marks.filter(mark => mark >= 40);
+---
+
+### 5. Get affordable prices
+**Real life:** Shopping app price filter
+js const prices = [199, 499, 999, 1499, 299]; const affordable = prices.filter(price => price <= 500);
+---
+
+### 6. Filter long words
+**Real life:** Search keyword validation
+js const words = ['hi', 'hello', 'javascript', 'ok']; function isLongWord(word) { return word.length > 3; } const longWords = words.filter(isLongWord);
+### 7. Filter positive numbers
+**Real life:** Bank transaction validation
+js const transactions = [200, -100, 500, -50, 300]; const credits = transactions.filter(amount => amount > 0);
+---
+
+### 8. Filter numbers within a range
+**Real life:** Score selection
+js const scores = [45, 60, 85, 30, 90]; const selectedScores = scores.filter(score => score >= 50 && score <= 90);
+
+
+<!-- --------------------------------------------------------------------------- -->
+
+### 1. Total money in wallet
+**Real life:** Add all cash amounts
+```js
+const money = [100, 200, 50];
+const totalMoney = money.reduce((sum, amount) => sum + amount, 0);
+```
+
+---
+
+### 2. Total steps walked in a week
+**Real life:** Fitness tracker
+```js
+const steps = [3000, 5000, 4000, 6000];
+function addSteps(total, step) {
+  return total + step;
+}
+const weeklySteps = steps.reduce(addSteps, 0);
+```
+
+---
+
+### 3. Find total cart price
+**Real life:** Shopping bill
+```js
+const prices = [499, 299, 199];
+const totalPrice = prices.reduce((total, price) => total + price, 0);
+```
+
+---
+
+### 4. Find maximum score
+**Real life:** Highest exam mark
+```js
+const marks = [45, 88, 67, 92];
+const highest = marks.reduce((max, mark) => {
+  return mark > max ? mark : max;
+}, marks[0]);
+```
+---
+
+### 5. Count total characters
+**Real life:** Text length calculation
+```js
+const words = ['Hi', 'Hello', 'JS'];
+const totalChars = words.reduce((count, word) => count + word.length, 0);
+```
+
+---
+
+### 6. Combine words into a sentence
+**Real life:** Message builder
+```js
+const words = ['Learning', 'JavaScript', 'is', 'fun'];
+const sentence = words.reduce((text, word) => text + ' ' + word);
+```
+---
+
+### 7. Count passed students
+**Real life:** Result summary
+```js
+const marks = [35, 72, 88, 40, 25];
+const passCount = marks.reduce((count, mark) => {
+  return mark >= 40 ? count + 1 : count;
+}, 0);
+```
+
+---
+
+### 8. Calculate final balance
+**Real life:** Bank account calculation
+```js
+const transactions = [1000, -200, -300, 500];
+const finalBalance = transactions.reduce((balance, amount) => balance + amount, 0);
+```
+---
+
+---
+
+### 10. Build comma-separated string
+**Real life:** Display values in UI
+```js
+const items = ['Pen', 'Book', 'Pencil'];
+const result = items.reduce((text, item) => text + ', ' + item);
 
 
 
 
 
+// ---------------------------------------------------------------------------
 
+console.log("filter example")
+
+
+### Q1. Shopping App – Discounted Total
+
+
+
+You are given a list of item prices.
+
+**Tasks:**
+
+
+
+1. Keep only items costing more than 500
+
+2. Apply a 10% discount to those items
+
+3. Find the total amount to pay
+
+
+
+```js
+
+const prices = [200, 800, 1200, 450, 700];
+
+```
+
+
+
+Ans: const total = prices
+
+.filter(price => price > 500)
+
+.map(price => price \* 0.9)
+
+.reduce((sum, price) => sum + price, 0);
+
+
+
+---
+
+
+
+### Q2. Fitness App – Total Active Minutes
+
+
+
+You are given daily activity minutes.
+
+**Tasks:**
+
+
+
+1. Keep only days with more than 30 minutes activity
+
+2. Convert minutes to calories (1 min = 5 calories)
+
+3. Calculate total calories burned
+
+
+
+```js
+
+const minutes = [20, 45, 60, 15, 90];
+
+```
+
+Ans:
+
+const totalCalories = minutes
+
+.filter(min => min > 30)
+
+.map(min => min * 5)
+
+.reduce((total, cal) => total + cal, 0);
+
+
+
+---
+
+
+
+### Q3. Exam System – Average of Passed Marks
+
+
+
+You are given marks of students.
+
+**Tasks:**
+
+
+
+1. Keep only passing marks (>= 40)
+
+2. Calculate the average of passed marks
+
+
+
+```js
+
+const marks = [35, 72, 88, 40, 25, 90];
+
+```
+
+Ans:
+
+const passed = marks.filter(mark => mark >= 40);
+
+const average = passed.reduce((sum, mark) => sum + mark, 0) / passed.length;
+
+---
+
+
+
+### Q4. Salary System – Monthly Payout
+
+
+
+You are given daily wages.
+
+**Tasks:**
+
+
+
+1. Keep wages greater than 500
+
+2. Add a bonus of 100 to each
+
+3. Calculate total payout
+
+
+
+```js
+
+const wages = [300, 800, 450, 1000, 600];
+
+```
+
+Ans: const totalPayout = wages
+
+.filter(wage => wage > 500)
+
+.map(wage => wage + 100)
+
+.reduce((total, wage) => total + wage, 0);
+
+---
+
+
+
+### Q5. Online Course – Completion Points
+
+
+
+You are given lesson completion percentages.
+
+**Tasks:**
+
+
+
+1. Keep only completed lessons (>= 50%)
+
+2. Convert percentage into points (percentage × 2)
+
+3. Calculate total points
+
+
+
+```js
+
+const progress = [20, 50, 75, 40, 100];
+
+```
+
+Ans: const totalPoints = progress
+
+.filter(p => p >= 50)
+
+.map(p => p * 2)
+
+.reduce((sum, p) => sum + p, 0);
+
+
+
+---
+
+
+
+### Q6. Bank Transactions – Final Balance
+
+
+
+You are given a list of transactions.
+
+**Tasks:**
+
+
+
+1. Keep only credit transactions (positive values)
+
+2. Add 2% interest to each credit
+
+3. Calculate final credited amount
+
+
+
+```js
+
+const transactions = [1000, -500, 2000, -300, 1500];
+
+```
+
+Ans: const creditedAmount = transactions
+
+.filter(amount => amount > 0)
+
+.map(amount => amount * 1.02)
+
+.reduce((total, amount) => total + amount, 0);
+
+
+
+---
+
+
+
+### Q7. Game App – Final Score
+
+
+
+You are given scores from multiple rounds.
+
+**Tasks:**
+
+
+
+1. Keep scores greater than 50
+
+2. Add bonus points (+10)
+
+3. Calculate final score
+
+
+
+```js
+
+const scores = [30, 60, 90, 45, 80];
+
+```
+
+Ans: const finalScore = scores
+
+.filter(score => score > 50)
+
+.map(score => score + 10)
+
+.reduce((sum, score) => sum + score, 0);
+
+
+
+---
+
+
+
+### Q8. E-commerce – Total Taxed Amount
+
+
+
+You are given item prices.
+
+**Tasks:**
+
+
+
+1. Keep items priced above 1000
+
+2. Add 18% tax
+
+3. Calculate final payable amount
+
+
+
+```js
+
+const prices = [500, 1200, 3000, 800, 1500];
+
+```
+
+Ans: const finalAmount = prices
+
+.filter(price => price > 1000)
+
+.map(price => price * 1.18)
+
+.reduce((sum, price) => sum + price, 0);
+
+---
+
+
+
+### Q9. Attendance System – Reward Points
+
+
+
+You are given daily attendance hours.
+
+
+
+**Tasks:**
+
+
+
+1. Keep days with attendance >= 8 hours
+
+2. Convert hours into points (1 hour = 10 points)
+
+3. Find total points earned
+
+
+
+```js
+
+const hours = [6, 8, 9, 7, 10];
+
+```
+
+ans: const totalPoints = hours
+
+.filter(hour => hour >= 8)
+
+.map(hour => hour * 10)
+
+.reduce((sum, point) => sum + point, 0);
+
+---
+
+
+
+### Q10. Interview Brain Teaser ⭐
+
+
+
+You are given a list of numbers.
+
+**Tasks:**
+
+
+
+1. Keep only even numbers
+
+2. Square each number
+
+3. Find the sum of squares
+
+
+
+```js
+
+const numbers = [1, 2, 3, 4, 5, 6];
+
+```
+
+ans: const sumOfSquares = numbers
+
+.filter(num => num % 2 === 0)
+
+.map(num => num * num)
+
+.reduce((sum, num) => sum + num, 0);
 
