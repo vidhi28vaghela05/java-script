@@ -1770,3 +1770,247 @@ ans: const sumOfSquares = numbers
 
 .reduce((sum, num) => sum + num, 0);
 
+
+
+
+// ---------------------------------------------------------------------------
+
+
+
+
+### Q1. Grocery Store – Total Cost
+
+1. Keep items costing more than 100
+2. Add 5% tax
+3. Find total cost
+
+```js
+const prices = [50, 120, 300, 80, 200];
+```
+
+---
+
+### Q2. Fitness App – Weekly Calories
+
+1. Keep days with workout minutes >= 20
+2. Convert minutes to calories (1 min = 4 cal)
+3. Find total calories
+
+```js
+const minutes = [10, 25, 40, 15, 60];
+```
+
+---
+
+### Q3. Exam Results – Total Passed Marks
+
+1. Keep passing marks (>= 40)
+2. Find total marks
+
+```js
+const marks = [35, 55, 80, 20, 45];
+```
+
+---
+
+### Q4. Bank App – Total Credits
+
+1. Keep only positive transactions
+2. Find total credited amount
+
+```js
+const transactions = [500, -200, 1000, -300, 700];
+```
+
+---
+
+### Q5. Online Sale – Discounted Bill
+
+1. Keep items above 1000
+2. Apply 15% discount
+3. Find total payable amount
+
+```js
+const prices = [800, 1500, 3000, 600, 1200];
+```
+
+---
+
+
+### Q6. Attendance – Reward Points
+
+1. Keep attendance hours >= 7
+2. Convert hours to points (×10)
+3. Find total points
+
+```js
+const hours = [5, 7, 8, 6, 9];
+```
+
+---
+
+### Q7. Delivery App – Total Distance
+1. Keep trips longer than 5 km
+2. Add 1 km bonus per trip
+3. Find total distance
+
+```js
+const distances = [3, 6, 10, 4, 8];
+```
+
+---
+
+### Q8. Salary System – Final Salary
+
+1. Keep salaries above 20,000
+2. Add 2,000 bonus
+3. Find total salary payout
+
+```js
+const salaries = [18000, 25000, 30000, 15000];
+```
+
+---
+
+### Q9. Study App – Total Study Time
+
+1. Keep sessions longer than 1 hour
+2. Convert hours to minutes
+3. Find total study minutes
+
+```js
+const hours = [0.5, 1.5, 2, 0.75, 3];
+```
+
+---
+
+### Q10. Electricity Usage – Monthly Bill
+
+1. Keep usage above 100 units
+2. Multiply by cost per unit (₹6)
+3. Find total bill
+
+```js
+const units = [80, 120, 200, 90, 150];
+```
+
+---
+### Q11. Game Scores – Final Power Score
+
+1. Keep scores above 40
+2. Double each score
+3. Find total power score
+
+```js
+const scores = [30, 50, 90, 20, 70];
+```
+
+---
+
+### Q12. Travel App – Total Fare
+
+1. Keep rides longer than 10 km
+2. Add ₹50 service fee
+3. Find total fare
+
+```js
+const rides = [5, 12, 20, 8, 15];
+```
+
+---
+
+### Q13. Office Work – Productive Hours
+
+1. Keep hours >= 6
+2. Convert hours to minutes
+3. Find total productive minutes
+
+```js
+const hours = [4, 6, 8, 5, 9];
+```
+
+---
+
+### Q14. Shopping Cart – Reward Coins
+
+1. Keep purchases above ₹500
+2. Give 10 coins per purchase
+3. Find total coins earned
+
+```js
+const purchases = [300, 800, 1200, 400];
+```
+
+---
+
+### Q15. Fuel App – Total Fuel Cost
+
+1. Keep fuel purchases above 5 liters
+2. Multiply by ₹105 per liter
+3. Find total cost
+
+```js
+const liters = [3, 6, 10, 4, 8];
+```
+
+---
+
+### Q16. Interview Classic – Sum of Cubes
+1. Keep odd numbers
+2. Cube each number
+3. Find total sum
+
+```js
+const numbers = [1, 2, 3, 4, 5];
+```
+
+---
+
+### Q17. Performance Tracking – Bonus Points
+
+1. Keep values above average
+2. Add 5 bonus points
+3. Find total score
+
+```js
+const scores = [10, 20, 30, 40, 50];
+```
+
+---
+
+### Q18. Subscription App – Final Bill
+
+1. Keep subscriptions above ₹300
+2. Add 18% tax
+3. Find final bill
+
+```js
+const plans = [199, 399, 599, 299];
+```
+
+---
+
+### Q19. Learning App – Achievement Score
+
+1. Keep scores >= 60
+2. Square each score
+3. Find total score
+
+```js
+const scores = [45, 60, 70, 30, 80];
+```
+
+---
+
+### Q20. Interview Finisher ⭐
+
+1. Keep numbers divisible by 3
+2. Multiply by 10
+3. Find total sum
+
+```js
+const numbers = [3, 6, 9, 10, 12];
+```
+
+---
+
