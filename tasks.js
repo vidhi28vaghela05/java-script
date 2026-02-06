@@ -181,7 +181,7 @@ const passCount = marks2.reduce((count, mark) => {
 }, 0);
 console.log(passCount);
 
-
+  
 // 8. Calculate final balance
 const transaction = [1000, -200, -300, 500];
 const finalBalance = transaction.reduce(
