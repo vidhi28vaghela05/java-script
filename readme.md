@@ -1100,6 +1100,11 @@ Answer: [2, 3, 1]
 Why: shift() removes first element and push() appends it at the end.
 
 
+
+<!-- --------------------------------------------------------------------------- -->
+
+
+
 1. Double daily steps count
 
 Real life: Fitness app doubling step goal
