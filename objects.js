@@ -132,3 +132,21 @@ let clone_user1 = JSON.parse(JSON.stringify(user1))
 // Avoid data mutation bugs
 
 // object.key -- add all keys into array formate
+
+
+// Object.entries -- add key and value into array formate
+// give array of arrays
+let key_value_arr = Object.entries(demo);
+// Use case: Display user details dynamically (UI)
+// ex. backend give you data into object formate
+// const user3 = {
+//   name: "Priya",
+//   city: "Ahmedabad",
+//   role: "Admin"
+// };
+// print key and value both in profile page
+// Object.entries(user3).forEach(([key, value]) => {
+//   console.log(`${key} : ${value}`);
+// });
+// Object.entries(user) => convert into Arrays
+// forEach => Array loop
