@@ -109,3 +109,26 @@ let user_data_assign1 = Object.assign({phone_number: 7894567894}, demo);  // - a
 // };
 // const finalSettings = Object.assign({}, defaultSettings, userSettings);
 // console.log(finalSettings);
+
+
+
+// deep clone
+let temp_user1_clone = { ...user1 }
+// user1_clone.address.city = "Valsad" --> that will change value of user1 too
+// issue : when you clone & copy nested object using spred or object.assign into new
+// variable that copy all value but nested object pass only refrence not copy
+// (jyare tame nested object(parent obj.) spred ma upyog thi copy karo tyare nested obj.
+// (child obj.) reference pass karshe -- value copy thase nahi)
+// How to clone that -- use deep clone
+// first convert your object to string
+// JSON - JavaScript Object Notation
+// JSON.stringify(obj_name) -- convert object into string
+// JSON.parse(stringify_Object) -- convert string to object
+let clone_user1 = JSON.parse(JSON.stringify(user1))
+// Deep clone = completely new memory
+// use case:
+// Real time use:
+// API response handling
+// Avoid data mutation bugs
+
+// object.key -- add all keys into array formate
