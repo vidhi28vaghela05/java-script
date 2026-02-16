@@ -71,8 +71,28 @@ let link = document.querySelector('a')
 console.dir(link)
 // console.log("get Attribute", info) // -- give value of href attribute
 
-// link.href = "https://www.google.com/"
+link.href = "https://www.google.com/"
 // element.setAttribute("name", "change")
 link.setAttribute("href", "www.google.com")
 let info = link.getAttribute("href");
 console.log("get Attribute", info) // -- give value
+
+
+
+// ------------------------------------
+// Dynamic DOM manipulation
+// createElement, appendChild, removeChild, prepend
+// createElement
+let text_h1 = document.createElement("h1");
+console.log(text_h1);
+text_h1.textContent = "create h1 with JS"
+
+// append / prepend
+document.body.append(text_h1);
+document.body.prepend(text_h1);
+
+// appendChild
+
+// append vs appendChild
+// remove vs removeChild
+// ------------------------------------
