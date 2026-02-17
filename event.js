@@ -47,6 +47,43 @@ inp.addEventListener("input",(dets)=>{
     }
 })
 
+
+// change -- when you chagne elements state
+let select = document.querySelector(".sel");
+let device = document.querySelector(".device")
+
+select.addEventListener("change", (dets)=>{
+    // console.log(dets);
+
+    console.log(dets.target.value);
+    device.textContent = dets.target.value;
+})
+
+
+let box1 = document.querySelector(".box")
+let bg_imp = document.querySelector(".bg-imp")
+let border_imp = document.querySelector(".border-imp")
+
+bg_imp.addEventListener("change", (dets)=>{
+    box1.style.backgroundColor=dets.target.value
+})
+
+border_imp.addEventListener("change", (dets)=>{
+    box1.style.borderColor=dets.target.value
+})
+
+
+
+let form = document.querySelector("form");
+form.addEventListener("submit",()=>{
+    document.body.style.backgroundColor="red";
+});
+
+
+
+
+
+
 // ---------------------------------------------------------------------------
 
 
