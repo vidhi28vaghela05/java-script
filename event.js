@@ -79,8 +79,27 @@ form.addEventListener("submit",()=>{
     document.body.style.backgroundColor="red";
 });
 
+// mousemove and mouseout
+let box2 =document.querySelector(".box2");
+
+box2.addEventListener("mousemove",()=>{
+    box2.style.backgroundColor="skyblue";
+    box2.style.width = "300px"
+});
+box2.addEventListener("mouseout",()=>{
+    box2.style.backgroundColor="darkgreen";
+    box2.style.width = "100px"
+});
 
 
+//keydown 
+let text = document.querySelector(".keydown");
+text.addEventListener("keydown", ()=>{
+    text.style.backgroundColor="black";
+    text.style.color="white";
+    text.style.width="5rem";
+
+})
 
 
 
