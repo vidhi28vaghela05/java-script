@@ -1,7 +1,7 @@
 // SetTimeout, clearTimeout
 // setTimeout --> run only one time
 // timeout -- in ms
-setTimeout(() => {
+let timmer=setTimeout(() => {
 console.log("Hello");
 }, 2000);
 
@@ -25,5 +25,17 @@ let num_counter = setInterval(() => {
         number ++ ;
     }
 },1000);
+clearInterval(num_counter)
 
 // popup windows
+//popup windows
+let card = document.querySelector(".card");
+let btn = document.querySelector("button");
+setTimeout(() => {
+card.style.display = "block";
+}, 5000);
+btn.addEventListener("click", () => {
+card.style.display = "none";
+});
+
+
