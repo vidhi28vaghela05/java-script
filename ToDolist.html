@@ -1,0 +1,175 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        #main{
+            justify-content: center;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            color: #555;
+            flex-direction: column;
+            row-gap: 2rem;
+            margin-top: 4rem;
+
+        }
+        #task_inp{
+            outline: none;
+            border: none;
+            background-color: #555;
+            padding: 5px 10px;
+            border-radius: 24px;
+            color: #222;
+        }
+.add_task{
+    border: none;
+    background-color: #555;
+    color: whitesmoke;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+.task_list{
+    color: white;
+   
+}
+.delete{
+    background-color: rgb(255,163,163);
+    color: red;
+    border: none;
+    border-radius: 7px;
+    padding: 5px 10px;
+    margin-left: 10px;
+
+}
+.task_list li{
+    margin: 0px 10px;
+}
+.task_list li input{
+    margin: 10px;
+}
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Task Management System</h1>
+        <div>
+            <input type="text" name="task" id="task_inp" placeholder="Add You Task .......">
+           <button class="add_task">Add Task</button>
+
+        </div>
+        <ul type="none" class="task_list">
+            <li> <input type="checkbox" name="" id="">task 1<button class="delete">delete</button></li>
+            <li> <input type="checkbox" name="" id="">task 2<button class="delete">delete</button></li>
+            <li> <input type="checkbox" name="" id="">task 3<button class="delete">delete</button></li>
+            <li> <input type="checkbox" name="" id="">task 4<button class="delete">delete</button></li>
+            <li> <input type="checkbox" name="" id="">task 5<button class="delete">delete</button></li>
+            <li> <input type="checkbox" name="" id="">task 6<button class="delete">delete</button></li>
+
+        </ul>
+    </div>
+    <script src="todo.js"></script>
+</body>
+</html> -->
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0px;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        #main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:#555;
+            flex-direction: column;
+            row-gap: 2rem;
+            margin-top: 4rem;
+        }
+        #task_inp{
+            outline: none;
+            border: none;
+            background-color: #555;
+            padding: 5px 10px;
+            border-radius: 24px;
+            color: #222;
+        }
+        .add_task{
+            border: none;
+            background-color: #555;
+            color: whitesmoke;
+            border-radius: 10px;
+            padding: 5px 10px;
+        }
+        .task_list{
+            color: white;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            justify-content: space-between;
+        }
+        .delete{
+            background-color: pink;
+            color: red;
+            border: none;
+            border-radius: 14px;
+            padding: 5px 10px;
+            margin-left: 10px;
+        }
+        .task_list input{
+            margin: 10px;
+        }
+         .task_list li{
+            margin: 10px 0px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <h1>Task Manager System</h1>
+      <div>
+        <input type="text" name="task" id="task_inp" placeholder="Search Task........."/>
+        <button class="add_task">Add Task</button>
+      </div>
+      <ul type="none" class="task_list">
+        <!-- <li>
+          <input type="checkbox" />task 1 <button class="delete">Delete</button>
+        </li>
+        <li>
+          <input type="checkbox" />task 2 <button class="delete">Delete</button>
+        </li>
+        <li>
+          <input type="checkbox" />task 3 <button class="delete">Delete</button>
+        </li>
+        <li>
+          <input type="checkbox" />task 4 <button class="delete">Delete</button>
+        </li>
+        <li>
+          <input type="checkbox" />task 5 <button class="delete">Delete</button>
+        </li>
+        <li>
+          <input type="checkbox" />task 6 <button class="delete">Delete</button>
+        </li> -->
+      </ul>
+    </div>
+
+    <script src="todo.js"></script>
+  </body>
+</html>
