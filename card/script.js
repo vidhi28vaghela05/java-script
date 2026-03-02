@@ -143,7 +143,7 @@ RenderUi();
 // up down btn 
 let upBtn = document.querySelector("#upBtn");
 upBtn.addEventListener("click",()=>{
-    let  lastChild =  Stack.lastElementChild;
+    let  lastChild =  stack.lastElementChild;
     if(lastChild){
         stack.append(lastChild, stack.firstElementChild);
     }
@@ -152,8 +152,8 @@ upBtn.addEventListener("click",()=>{
 // Down btn 
 let downBtn = document.querySelector("#downBtn");
 downBtn.addEventListener("click",()=>{
-    let  firstChild =  Stack.firstElementChild;
-    if(lastChild){
+    let  firstChild =  stack.firstElementChild;
+    if(firstChild){
         stack.append(firstChild, stack.firstElementChild);
     }
 });
