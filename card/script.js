@@ -139,3 +139,21 @@ function RenderUi(data) {
 }
 
 RenderUi();
+
+// up down btn 
+let upBtn = document.querySelector("#upBtn");
+upBtn.addEventListener("click",()=>{
+    let  lastChild =  Stack.lastElementChild;
+    if(lastChild){
+        stack.append(lastChild, stack.firstElementChild);
+    }
+});
+
+// Down btn 
+let downBtn = document.querySelector("#downBtn");
+downBtn.addEventListener("click",()=>{
+    let  firstChild =  Stack.firstElementChild;
+    if(lastChild){
+        stack.append(firstChild, stack.firstElementChild);
+    }
+});
