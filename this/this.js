@@ -121,3 +121,32 @@ let obj5 = {
   name: "test10",
   email: "a@a.com",
 }; // save this obj. into this keyword
+
+function temp_a() {
+  console.log(this);
+}
+
+// function.call(object_name) --> this keyword ni value set karva mate call method no upyog kariye chhiye
+// temp_a.call(obj5);
+
+// function.apply(object_name) --> this keyword ni value set karva mate apply method no upyog kariye chhiye
+// temp_a.apply(obj5);
+
+// function.bind(object_name) --> this keyword ni value set karva mate bind method no upyog kariye chhiye
+let fnc = temp_a.bind(obj5);//blank object create
+fnc();
+// console.log(fnc);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
