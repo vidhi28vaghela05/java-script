@@ -1,11 +1,10 @@
-// // 1. select -> Event --> Function (Change)
-// // 2. Show Form and Close Form
-// // 3. form validation, submit, reset
-// // 4. store into localstorage
-// // 5. createElement and show data
-// // 6. show All data into HTML
-// // 7. Create UP and Down Btn
-
+// 1. select -> Event --> Function (Change)
+// 2. Show Form and Close Form
+// 3. form validation, submit, reset
+// 4. store into localstorage
+// 5. createElement and show data
+// 6. show All data into HTML
+// 7. Create UP and Down Btn
 let add = document.querySelector("#add-note");
 let close = document.querySelector(".closeForm");
 let form = document.querySelector("form");
@@ -47,15 +46,19 @@ form.addEventListener("submit", (e) => {
   });
   if (imgUrl === "") {
     alert("Please enter image url");
+    return;
   }
   if (u_name === "") {
     alert("Please enter full name");
+    return;
   }
   if (town === "") {
     alert("Please enter home town");
+    return;
   }
   if (purpose === "") {
     alert("Please enter note");
+    return;
   }
   saveData({
     imgUrl,
@@ -72,88 +75,83 @@ function saveData(note) {
   data.push(note);
   localStorage.setItem("notes", JSON.stringify(data));
 }
-let stake = document.querySelector(".stack");
+let stack = document.querySelector(".stack");
 function RenderUi(data) {
   let allData = JSON.parse(localStorage.getItem("notes"));
-  allData.forEach((note) => {
+  allData.forEach((element) => {
     //div(card)
     let card = document.createElement("div");
     card.classList.add("card");
-
-
     //image(avatar)
     let img = document.createElement("img");
     img.classList.add("avatar");
-    img.setAttribute("src",note.imgUrl);
-  
+    img.setAttribute("src", element.imgUrl);
+
     //h2
     let h2 = document.createElement("h2");
-    h2.textContent = note.u_name;
+    h2.textContent = element.u_name;
 
     //div(info) ==>  span(home town)
-    let info = document.createElement("div");
-    info.classList.add("info");
+    let info1 = document.createElement("div");
+    info1.classList.add("info");
 
     let home = document.createElement("span");
-    home.textContent = "home";
+    home.textContent = "Home town";
     let town = document.createElement("span");
-    town.textContent= note.town;
+    town.textContent = element.town;
 
     //div(info) ==>  span(purpose  , note(data))
     let info2 = document.createElement("div");
     info2.classList.add("info");
 
     let purpose = document.createElement("span");
-    purpose.textContent= "purpose";
+    purpose.textContent = "Purpose";
     let note_msg = document.createElement("span");
-    note_msg.textContent = note.purpose;
+    note_msg.textContent = element.purpose;
 
     //div (button) ==> button (call,msg)
     let buttons = document.createElement("div");
     buttons.classList.add("buttons");
-
     let call = document.createElement("button");
     call.classList.add("call");
-    call.innerHTML = `<i class="ri-phone-line"></i>Call`;
-    
+    call.innerHTML = `<i class="ri-phone-line"></i> Call`;
     let msg = document.createElement("button");
     msg.classList.add("msg");
-    msg.innerHTML = `<i class="ri-message-line"></i>Message`;
+    msg.innerHTML = `<i class="ri-message-line"></i> Message`;
 
     //APEND
-    stake.appendChild(card);
+    stack.appendChild(card);
     card.appendChild(img);
     card.appendChild(h2);
-    card.appendChild(info);
+    card.appendChild(info1);
     card.appendChild(info2);
     info2.appendChild(purpose);
     info2.appendChild(note_msg);
-    info.appendChild(home);
-    info.appendChild(town);
+    info1.appendChild(home);
+    info1.appendChild(town);
 
     card.appendChild(buttons);
     buttons.appendChild(call);
     buttons.appendChild(msg);
-    console.log(stake);
+    console.log(stack);
   });
 }
 
 RenderUi();
 
-// up down btn 
-let upBtn = document.querySelector("#upBtn");
-upBtn.addEventListener("click",()=>{
-    let  lastChild =  stack.lastElementChild;
-    if(lastChild){
-        stack.append(lastChild, stack.firstElementChild);
-    }
+//up btn
+let upbtn = document.querySelector("#upBtn");
+upbtn.addEventListener("click", () => {
+  let lastChild = stack.lastElementChild;
+  if (lastChild) {
+    stack.prepend(lastChild);
+  }
 });
+let downBtn=document.querySelector("#downBtn");
 
-// Down btn 
-let downBtn = document.querySelector("#downBtn");
-downBtn.addEventListener("click",()=>{
-    let  firstChild =  stack.firstElementChild;
-    if(firstChild){
-        stack.append(firstChild, stack.firstElementChild);
-    }
+downBtn.addEventListener('click',()=>{
+    let firstChild=stack.firstElementChild;
+if(firstChild){
+    stack.append(firstChild,stack.firstElementChild);
+}
 });
