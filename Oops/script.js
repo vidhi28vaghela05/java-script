@@ -93,6 +93,7 @@ class Admin extends User{
      constructor(name, email, password, rigths){
        super(name, email, password) // extends class constrouctor -->super
        this.role = "admin";
+       this.rigths= rigths;
     }
 }
 let admin = new Admin("admin", "admin@gamil.com", "abc@123","delete user, edit user, create user",);
