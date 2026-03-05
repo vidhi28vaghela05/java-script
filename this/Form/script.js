@@ -10,6 +10,14 @@ const UserManager ={
     // font event 
     init: function(){
         // console.log("this value",this);
+
+           let data = localStorage.getItem("users");
+
+    if(data){
+        this.users = JSON.parse(data);
+        this.renderUi();
+    }
+
         form.addEventListener("submit",this.submit.bind(this));
     },
     // submit method 
@@ -29,11 +37,18 @@ addUser: function(){
         bio: bio.value,
         img:img.value,
     });
+     localStorage.setItem("users", JSON.stringify(this.users));
     console.log(this.users);
     form.reset();
     this.renderUi();
 },
+removeUser: function(index){
+    this.users.splice(index,1);
 
+    localStorage.setItem("users", JSON.stringify(this.users));
+
+    this.renderUi();
+},
     // render ui
     renderUi: function(){
         console.log(this.users);
@@ -53,6 +68,9 @@ addUser: function(){
     <p class="text-lg text-slate-500 my-2 font-medium">
        ${data.bio}
     </p>
+    <button onclick="UserManager.removeUser(${index})">
+Delete
+</button>
     </div>`
     });
     },
