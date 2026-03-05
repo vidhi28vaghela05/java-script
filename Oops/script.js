@@ -101,6 +101,16 @@ console.log("admin", admin);
 
 
 
+// prototypal inheritance vs classical inheritance
+// classical Inheritance --> create a classes and extends their classes
+
+// inheritance meaning --> class to class inheritance (copy one class into another class)
+
+// prototypal inheritance --> object to object ek object che tene tame all props/methods ne inherit kari cho ne nava object ma
+
+// create form that can save data into local storage with help of using OOPS (only)
+
+
 
 
 
