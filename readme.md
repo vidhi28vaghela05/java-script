@@ -2999,15 +2999,14 @@ Tasks:
 5. Recipes cards ==> Dummyjson API
 6. Print Fruit Data ==> https://www.fruityvice.com/api/fruit/all
 7. Random Jokes ==> https://teehee.dev/api/joke (add refresh btn for get new joke)
-8. Temp Email ==> https://hub.juheapi.com/temp-mail/v1/create?apikey=434306d581f376e3aa290e7c7df966fc (add refresh btn for get new email)
-9. Extinct Animals ==> https://extinct-api.herokuapp.com/api/v1/animal/
-10. Random Image ==> https://dog.ceo/dog-api/?ref=freepublicapis.com (check Documentation)
-11. Random Quotes ==> https://buddha-api.com/?ref=freepublicapis.com (check Documnetation)
-12. Generate Random Password ==> https://answerbook.david888.com/RandomPassword(when you click on new password btn that give you new password)
-13. Random Advice Generated ==> https://api.adviceslip.com/advice (Refresh Btn for get New Advice)
-14. Disney APIS ==> https://disneyapi.dev/docs/?ref=freepublicapis.com (check Documentation)
-
-
+8. Extinct Animals ==> https://extinct-api.herokuapp.com/api/v1/animal/
+9. Random Image ==> https://dog.ceo/dog-api/?ref=freepublicapis.com (check Documentation)
+10. Random Quotes ==> https://buddha-api.com/?ref=freepublicapis.com (check Documnetation)
+11. Generate Random Password ==> https://answerbook.david888.com/RandomPassword(when you click on new password btn that give you new password)
+12. Random Advice Generated ==> https://api.adviceslip.com/advice (Refresh Btn for get New Advice)
+13. 	Disney APIS ==> https://disneya pi.dev/docs/?ref=freepublicapis.com (check Documentation)
+14. Studio Ghibhli Movie ==> https://ghibliapi.vercel.app/films
+15.
 
 
 
