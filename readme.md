@@ -2976,3 +2976,39 @@ Number.isNaN(value);
     // })
 // 26. Set the font size of all <p> elements to 18px using .style
  
+
+
+
+// ---------------------------------------------------------------------------
+
+
+
+
+
+Tasks:
+1. User Card ==> randome user Api
+2. User Profile ==> JSON Placeholder API
+3. User Posts ==> JSON Placeholder API
+4. Producat cards ==> Dummyjson API
+5. Recipes cards ==> Dummyjson API
+6. Print Fruit Data ==> https://www.fruityvice.com/api/fruit/all
+7. Random Jokes ==> https://teehee.dev/api/joke (add refresh btn for get new joke)
+8. Temp Email ==> https://hub.juheapi.com/temp-mail/v1/create?apikey=434306d581f376e3aa290e7c7df966fc (add refresh btn for get new email)
+9. Extinct Animals ==> https://extinct-api.herokuapp.com/api/v1/animal/
+10. Random Image ==> https://dog.ceo/dog-api/?ref=freepublicapis.com (check Documentation)
+11. Random Quotes ==> https://buddha-api.com/?ref=freepublicapis.com (check Documnetation)
+12. Generate Random Password ==> https://answerbook.david888.com/RandomPassword(when you click on new password btn that give you new password)
+13. Random Advice Generated ==> https://api.adviceslip.com/advice (Refresh Btn for get New Advice)
+14. Disney APIS ==> https://disneyapi.dev/docs/?ref=freepublicapis.com (check Documentation)
+
+
+
+
+
+
+
+
+
+
+
+
