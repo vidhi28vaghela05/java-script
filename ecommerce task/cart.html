@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlairWear | Cart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-white text-gray-900">
+  <header data-sticky-nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur transition-shadow duration-300">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="index.html" class="text-2xl font-bold tracking-tight">FlairWear</a>
+      <nav class="hidden items-center gap-8 text-sm font-medium md:flex"><a href="index.html" class="text-gray-600">Home</a><a href="shop.html" class="text-gray-600">Shop</a><a href="about.html" class="text-gray-600">About</a><a href="contact.html" class="text-gray-600">Contact</a></nav>
+      <a href="cart.html" class="relative text-black"><i class="fa-solid fa-cart-shopping"></i><span data-cart-count class="absolute -right-2 -top-2 hidden h-4 min-w-4 rounded-full bg-black px-1 text-[10px] leading-4 text-white"></span></a>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between gap-3">
+      <h1 class="text-3xl font-semibold">Your Cart</h1>
+      <button id="clear-cart" class="rounded-xl border border-gray-300 px-4 py-2 text-sm font-medium hover:bg-gray-100">Clear Cart</button>
+    </div>
+
+    <div class="mt-8 grid gap-8 lg:grid-cols-3">
+      <section class="lg:col-span-2">
+        <p id="cart-empty" class="hidden rounded-2xl border border-gray-200 bg-gray-50 p-5 text-sm text-gray-600">Your cart is empty. Add products from Home, Shop, or Product page.</p>
+        <div id="cart-list" class="space-y-4"></div>
+      </section>
+      <aside class="h-fit rounded-2xl border border-gray-200 bg-gray-50 p-6">
+        <h2 class="text-xl font-semibold">Order Summary</h2>
+        <div class="mt-4 space-y-2 text-sm text-gray-600">
+          <p class="flex justify-between"><span>Subtotal</span><span id="subtotal">$0.00</span></p>
+          <p class="flex justify-between"><span>Shipping</span><span id="shipping">$0.00</span></p>
+          <p class="flex justify-between border-t border-gray-200 pt-3 text-base font-semibold text-gray-900"><span>Total</span><span id="total">$0.00</span></p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="border-t border-gray-200 bg-white"><p class="py-5 text-center text-sm text-gray-500">&copy; 2026 FlairWear. All rights reserved.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

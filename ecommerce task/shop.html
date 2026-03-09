@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FlairWear | Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-white text-gray-900">
+  <header data-sticky-nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur transition-shadow duration-300">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="index.html" class="text-2xl font-bold tracking-tight">FlairWear</a>
+      <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
+        <a href="index.html" class="text-gray-600 hover:text-black">Home</a>
+        <a href="shop.html" class="text-black">Shop</a>
+        <a href="about.html" class="text-gray-600 hover:text-black">About</a>
+        <a href="contact.html" class="text-gray-600 hover:text-black">Contact</a>
+      </nav>
+      <div class="hidden items-center gap-4 md:flex">
+        <button class="text-gray-600 hover:text-black"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a href="cart.html" class="relative text-gray-600 hover:text-black"><i class="fa-solid fa-cart-shopping"></i><span data-cart-count class="absolute -right-2 -top-2 hidden h-4 min-w-4 rounded-full bg-black px-1 text-[10px] leading-4 text-white"></span></a>
+        <button class="text-gray-600 hover:text-black"><i class="fa-regular fa-user"></i></button>
+      </div>
+      <button data-menu-toggle class="md:hidden text-gray-700"><i class="fa-solid fa-bars text-xl"></i></button>
+    </div>
+    <div id="mobile-menu" class="hidden border-t border-gray-200 bg-white md:hidden"><nav class="mx-auto grid max-w-7xl gap-3 px-4 py-4 text-sm sm:px-6"><a href="index.html">Home</a><a href="shop.html" class="font-medium">Shop</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="cart.html">Cart</a></nav></div>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
+    <h1 class="text-3xl font-semibold">Shop</h1>
+    <div class="mt-8 grid gap-8 lg:grid-cols-4">
+      <aside class="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+        <h2 class="text-lg font-semibold">Categories</h2>
+        <ul class="mt-4 space-y-3 text-sm text-gray-600">
+          <li><button type="button" data-filter="all" class="shop-filter text-left font-semibold text-black hover:text-black">All</button></li>
+          <li><button type="button" data-filter="men" class="shop-filter text-left hover:text-black">Men</button></li>
+          <li><button type="button" data-filter="women" class="shop-filter text-left hover:text-black">Women</button></li>
+          <li><button type="button" data-filter="accessories" class="shop-filter text-left hover:text-black">Accessories</button></li>
+          <li><button type="button" data-filter="footwear" class="shop-filter text-left hover:text-black">Footwear</button></li>
+          <li><button type="button" data-filter="bags" class="shop-filter text-left hover:text-black">Bags</button></li>
+        </ul>
+      </aside>
+
+      <section class="lg:col-span-3 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        <article data-category="men" class="shop-item rounded-2xl border border-gray-200 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=700&q=80" alt="Men T-shirt" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Men T-shirt</h3><p class="text-sm text-gray-500">$35.00</p><button data-add-to-cart data-id="s1" data-title="Men T-shirt" data-price="35" data-image="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-black px-4 py-2 text-sm text-white transition hover:bg-gray-800">Add to Cart</button></article>
+        <article data-category="women" class="shop-item rounded-2xl border border-gray-200 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=700&q=80" alt="Women Dress" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Women Dress</h3><p class="text-sm text-gray-500">$78.00</p><button data-add-to-cart data-id="s2" data-title="Women Dress" data-price="78" data-image="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-black px-4 py-2 text-sm text-white transition hover:bg-gray-800">Add to Cart</button></article>
+        <article data-category="accessories" class="shop-item rounded-2xl border border-gray-200 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=80" alt="Sunglasses" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Sunglasses</h3><p class="text-sm text-gray-500">$45.00</p><button data-add-to-cart data-id="s3" data-title="Sunglasses" data-price="45" data-image="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-black px-4 py-2 text-sm text-white transition hover:bg-gray-800">Add to Cart</button></article>
+        <article data-category="men" class="shop-item rounded-2xl border border-gray-200 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1595341595379-cf0f9f6ecf5b?auto=format&fit=crop&w=700&q=80" alt="Leather Jacket" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Leather Jacket</h3><p class="text-sm text-gray-500">$130.00</p><button data-add-to-cart data-id="s4" data-title="Leather Jacket" data-price="130" data-image="https://images.unsplash.com/photo-1595341595379-cf0f9f6ecf5b?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-black px-4 py-2 text-sm text-white transition hover:bg-gray-800">Add to Cart</button></article>
+        <article data-category="bags" class="shop-item rounded-2xl border border-gray-200 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80" alt="Handbag" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Handbag</h3><p class="text-sm text-gray-500">$95.00</p><button data-add-to-cart data-id="s5" data-title="Handbag" data-price="95" data-image="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-black px-4 py-2 text-sm text-white transition hover:bg-gray-800">Add to Cart</button></article>
+        <article data-category="footwear" class="shop-item rounded-2xl border border-gray-200 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=80" alt="Running Shoes" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Running Shoes</h3><p class="text-sm text-gray-500">$110.00</p><button data-add-to-cart data-id="s6" data-title="Running Shoes" data-price="110" data-image="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-black px-4 py-2 text-sm text-white transition hover:bg-gray-800">Add to Cart</button></article>
+      </section>
+    </div>
+  </main>
+
+  <footer class="border-t border-gray-200 bg-white"><p class="py-5 text-center text-sm text-gray-500">&copy; 2026 FlairWear. All rights reserved.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
