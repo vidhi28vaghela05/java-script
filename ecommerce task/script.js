@@ -240,6 +240,57 @@
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
   }
 
+  function setupSearchUI() {
+    const toggles = document.querySelectorAll('[data-search-toggle]');
+    if (!toggles.length) return;
+    const header = document.querySelector('[data-sticky-nav]');
+    if (!header) return;
+    let container = document.getElementById('site-search');
+    if (!container) {
+      const wrapper = document.createElement('div');
+      wrapper.id = 'site-search';
+      wrapper.className = 'border-t border-emerald-100 bg-stone-50 hidden';
+      wrapper.innerHTML =
+        '<div class=\"mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8\">' +
+        '<input id=\"site-search-input\" type=\"search\" placeholder=\"Search products...\" class=\"w-full rounded-xl border border-emerald-200 px-4 py-3 text-sm outline-none focus:border-emerald-700\" />' +
+        '</div>';
+      header.insertAdjacentElement('afterend', wrapper);
+      container = wrapper;
+    }
+    const input = document.getElementById('site-search-input');
+    const toggleFn = () => {
+      container.classList.toggle('hidden');
+      if (!container.classList.contains('hidden')) input.focus();
+      if (container.classList.contains('hidden')) {
+        input.value = '';
+        applySearch('');
+      }
+    };
+    toggles.forEach((btn) => btn.addEventListener('click', toggleFn));
+    input.addEventListener('input', () => applySearch(input.value));
+  }
+
+  function applySearch(termRaw) {
+    const term = String(termRaw || '').trim().toLowerCase();
+    const shopItems = document.querySelectorAll('.shop-item');
+    if (shopItems.length) {
+      shopItems.forEach((item) => {
+        const title = (item.querySelector('h3')?.textContent || '').toLowerCase();
+        const show = !term || title.includes(term);
+        item.classList.toggle('hidden', !show);
+      });
+    } else {
+      const cards = document.querySelectorAll('main article');
+      cards.forEach((card) => {
+        const h3 = card.querySelector('h3');
+        if (!h3) return;
+        const title = h3.textContent || '';
+        const show = !term || title.toLowerCase().includes(term);
+        card.classList.toggle('hidden', !show);
+      });
+    }
+  }
+
   function setupShopFilters() {
     const filters = document.querySelectorAll('.shop-filter[data-filter]');
     const items = document.querySelectorAll('.shop-item[data-category]');
@@ -265,6 +316,38 @@
     });
   }
 
+  function setupUserUI() {
+    const toggles = document.querySelectorAll('[data-user-toggle]');
+    if (!toggles.length) return;
+    const header = document.querySelector('[data-sticky-nav]');
+    if (!header) return;
+    let container = document.getElementById('user-menu');
+    if (!container) {
+      const wrapper = document.createElement('div');
+      wrapper.id = 'user-menu';
+      wrapper.className = 'border-t border-emerald-100 bg-white hidden';
+      wrapper.innerHTML =
+        '<div class=\"mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8\">' +
+        '<div class=\"flex gap-4 text-sm\">' +
+        '<a href=\"#\" class=\"rounded-lg border border-emerald-200 px-4 py-2 hover:bg-emerald-50\">Sign In</a>' +
+        '<a href=\"#\" class=\"rounded-lg border border-emerald-200 px-4 py-2 hover:bg-emerald-50\">Register</a>' +
+        '<a href=\"#\" class=\"rounded-lg border border-emerald-200 px-4 py-2 hover:bg-emerald-50\">Orders</a>' +
+        '</div>' +
+        '</div>';
+      header.insertAdjacentElement('afterend', wrapper);
+      container = wrapper;
+    }
+    const toggleFn = () => {
+      container.classList.toggle('hidden');
+      // Close search if open to avoid stacking
+      const search = document.getElementById('site-search');
+      if (search && !container.classList.contains('hidden')) {
+        search.classList.add('hidden');
+      }
+    };
+    toggles.forEach((btn) => btn.addEventListener('click', toggleFn));
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     setupMobileMenu();
     setupStickyNav();
@@ -272,6 +355,8 @@
     setupGallerySwitch();
     setupCartActions();
     setupAnimations();
+    setupSearchUI();
+    setupUserUI();
     setupShopFilters();
     updateCartCount();
     renderCart();

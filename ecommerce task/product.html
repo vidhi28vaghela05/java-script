@@ -3,52 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FlairWear | Product</title>
+  <title>Leaf & Clay | Product</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-white text-gray-900">
-  <header data-sticky-nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur transition-shadow duration-300">
+<body class="bg-stone-50 text-stone-900">
+  <header data-sticky-nav class="sticky top-0 z-50 border-b border-emerald-100 bg-stone-50/95 backdrop-blur transition-shadow duration-300">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-      <a href="index.html" class="text-2xl font-bold tracking-tight">FlairWear</a>
-      <nav class="hidden items-center gap-8 text-sm font-medium md:flex"><a href="index.html" class="text-gray-600">Home</a><a href="shop.html" class="text-black">Shop</a><a href="about.html" class="text-gray-600">About</a><a href="contact.html" class="text-gray-600">Contact</a></nav>
-      <div class="hidden items-center gap-4 md:flex"><a href="cart.html" class="relative text-gray-600 hover:text-black"><i class="fa-solid fa-cart-shopping"></i><span data-cart-count class="absolute -right-2 -top-2 hidden h-4 min-w-4 rounded-full bg-black px-1 text-[10px] leading-4 text-white"></span></a></div>
-      <button data-menu-toggle class="md:hidden text-gray-700"><i class="fa-solid fa-bars text-xl"></i></button>
+      <a href="index.html" class="text-2xl font-bold tracking-tight text-emerald-900">Leaf & Clay</a>
+      <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
+        <a href="index.html" class="text-stone-600 hover:text-emerald-800 transition-colors">Home</a>
+        <a href="shop.html" class="text-emerald-900">Shop</a>
+        <a href="about.html" class="text-stone-600 hover:text-emerald-800 transition-colors">About</a>
+        <a href="contact.html" class="text-stone-600 hover:text-emerald-800 transition-colors">Contact</a>
+      </nav>
+      <div class="hidden items-center gap-4 md:flex">
+        <button data-search-toggle class="text-stone-600 hover:text-emerald-800"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a href="cart.html" class="relative text-stone-600 hover:text-emerald-800"><i class="fa-solid fa-cart-shopping"></i><span data-cart-count class="absolute -right-2 -top-2 hidden h-4 min-w-4 rounded-full bg-emerald-800 px-1 text-[10px] leading-4 text-white"></span></a>
+        <button data-user-toggle class="text-stone-600 hover:text-emerald-800"><i class="fa-regular fa-user"></i></button>
+      </div>
+      <button data-menu-toggle class="md:hidden text-stone-700"><i class="fa-solid fa-bars text-xl"></i></button>
     </div>
-    <div id="mobile-menu" class="hidden border-t border-gray-200 bg-white md:hidden"><nav class="mx-auto grid max-w-7xl gap-3 px-4 py-4 text-sm sm:px-6"><a href="index.html">Home</a><a href="shop.html" class="font-medium">Shop</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="cart.html">Cart</a></nav></div>
+    <div id="mobile-menu" class="hidden border-t border-emerald-100 bg-stone-50 md:hidden"><nav class="mx-auto grid max-w-7xl gap-3 px-4 py-4 text-sm sm:px-6"><a href="index.html">Home</a><a href="shop.html" class="font-medium">Shop</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="cart.html">Cart</a></nav></div>
   </header>
 
   <main class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
     <div class="grid gap-10 lg:grid-cols-2">
       <section>
-        <img id="product-main-image" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1000&q=80" alt="Main product" class="h-[520px] w-full rounded-2xl object-cover" />
+        <img id="product-main-image" src="https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=1000&q=80" alt="Monstera Deliciosa" class="h-[520px] w-full rounded-2xl object-cover" />
         <div class="mt-4 grid grid-cols-4 gap-3">
-          <button data-thumb="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1000&q=80" class="rounded-xl ring-2 ring-black"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=300&q=80" class="h-20 w-full rounded-xl object-cover" alt="thumb"></button>
-          <button data-thumb="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1000&q=80" class="rounded-xl"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=300&q=80" class="h-20 w-full rounded-xl object-cover" alt="thumb"></button>
-          <button data-thumb="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=1000&q=80" class="rounded-xl"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=300&q=80" class="h-20 w-full rounded-xl object-cover" alt="thumb"></button>
-          <button data-thumb="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=1000&q=80" class="rounded-xl"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=300&q=80" class="h-20 w-full rounded-xl object-cover" alt="thumb"></button>
+          <button data-thumb="https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=1000&q=80" class="rounded-xl ring-2 ring-emerald-800"><img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=300&q=80" class="h-20 w-full rounded-xl object-cover" alt="Monstera thumb"></button>
+          <button data-thumb="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1000&q=80" class="rounded-xl"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=300&q=80" class="h-20 w-full rounded-xl object-cover" alt="Snake plant thumb"></button>
+          <button data-thumb="https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=1000&q=80" class="rounded-xl"><img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=300&q=80" class="h-20 w-full rounded-xl object-cover" alt="Fiddle leaf fig thumb"></button>
+          <button data-thumb="https://images.unsplash.com/photo-1477554193778-9562c28588c0?auto=format&fit=crop&w=1000&q=80" class="rounded-xl"><img src="https://images.unsplash.com/photo-1477554193778-9562c28588c0?auto=format&fit=crop&w=300&q=80" class="h-20 w-full rounded-xl object-cover" alt="Palm plant thumb"></button>
         </div>
       </section>
 
       <section class="lg:pt-6">
-        <h1 class="text-3xl font-semibold">Premium Summer Tee</h1>
-        <p class="mt-3 text-2xl font-semibold">$35.00</p>
-        <p class="mt-5 text-gray-600">Crafted from breathable cotton with a relaxed fit, this tee is your go-to for effortless summer styling. Pair it with denim or shorts for a clean, modern look.</p>
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-700">Indoor foliage</p>
+        <h1 class="mt-2 text-3xl font-semibold text-emerald-950">Monstera Deliciosa</h1>
+        <p class="mt-3 text-2xl font-semibold">$69.00</p>
+        <p class="mt-5 text-stone-600">A sculptural indoor plant with split leaves and fast growth. This Monstera thrives in bright indirect light and adds a bold tropical feel to living rooms, bedrooms, and studio corners.</p>
         <div class="mt-8 flex items-center gap-3">
-          <label for="product-qty" class="text-sm text-gray-600">Qty</label>
-          <input id="product-qty" type="number" min="1" value="1" class="w-20 rounded-lg border border-gray-300 px-3 py-2 text-sm outline-none focus:border-black" />
-          <button data-add-to-cart data-qty-input="product-qty" data-id="p1" data-title="Premium Summer Tee" data-price="35" data-image="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=300&q=80" class="rounded-xl bg-black px-8 py-3 text-sm font-semibold text-white transition hover:bg-gray-800">Add to Cart</button>
+          <label for="product-qty" class="text-sm text-stone-600">Qty</label>
+          <input id="product-qty" type="number" min="1" value="1" class="w-20 rounded-lg border border-emerald-200 px-3 py-2 text-sm outline-none focus:border-emerald-700" />
+          <button data-add-to-cart data-qty-input="product-qty" data-id="p1" data-title="Monstera Deliciosa" data-price="69" data-image="https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=300&q=80" class="rounded-xl bg-emerald-800 px-8 py-3 text-sm font-semibold text-white transition hover:bg-emerald-900">Add to Cart</button>
         </div>
       </section>
     </div>
   </main>
 
-  <footer class="border-t border-gray-200 bg-white"><p class="py-5 text-center text-sm text-gray-500">&copy; 2026 FlairWear. All rights reserved.</p></footer>
+  <footer class="border-t border-emerald-100 bg-white"><p class="py-5 text-center text-sm text-stone-500">&copy; 2026 Leaf & Clay. All rights reserved.</p></footer>
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-

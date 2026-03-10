@@ -3,62 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FlairWear | Shop</title>
+  <title>Leaf & Clay | Shop</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-white text-gray-900">
-  <header data-sticky-nav class="sticky top-0 z-50 border-b border-gray-200 bg-white/95 backdrop-blur transition-shadow duration-300">
+<body class="bg-stone-50 text-stone-900">
+  <header data-sticky-nav class="sticky top-0 z-50 border-b border-emerald-100 bg-stone-50/95 backdrop-blur transition-shadow duration-300">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-      <a href="index.html" class="text-2xl font-bold tracking-tight">FlairWear</a>
+      <a href="index.html" class="text-2xl font-bold tracking-tight text-emerald-900">Leaf & Clay</a>
       <nav class="hidden items-center gap-8 text-sm font-medium md:flex">
-        <a href="index.html" class="text-gray-600 hover:text-black">Home</a>
-        <a href="shop.html" class="text-black">Shop</a>
-        <a href="about.html" class="text-gray-600 hover:text-black">About</a>
-        <a href="contact.html" class="text-gray-600 hover:text-black">Contact</a>
+        <a href="index.html" class="text-stone-600 hover:text-emerald-800 transition-colors">Home</a>
+        <a href="shop.html" class="text-emerald-900">Shop</a>
+        <a href="about.html" class="text-stone-600 hover:text-emerald-800 transition-colors">About</a>
+        <a href="contact.html" class="text-stone-600 hover:text-emerald-800 transition-colors">Contact</a>
       </nav>
       <div class="hidden items-center gap-4 md:flex">
-        <button class="text-gray-600 hover:text-black"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <a href="cart.html" class="relative text-gray-600 hover:text-black"><i class="fa-solid fa-cart-shopping"></i><span data-cart-count class="absolute -right-2 -top-2 hidden h-4 min-w-4 rounded-full bg-black px-1 text-[10px] leading-4 text-white"></span></a>
-        <button class="text-gray-600 hover:text-black"><i class="fa-regular fa-user"></i></button>
+        <button data-search-toggle class="text-stone-600 hover:text-emerald-800"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a href="cart.html" class="relative text-stone-600 hover:text-emerald-800"><i class="fa-solid fa-cart-shopping"></i><span data-cart-count class="absolute -right-2 -top-2 hidden h-4 min-w-4 rounded-full bg-emerald-800 px-1 text-[10px] leading-4 text-white"></span></a>
+        <button data-user-toggle class="text-stone-600 hover:text-emerald-800"><i class="fa-regular fa-user"></i></button>
       </div>
-      <button data-menu-toggle class="md:hidden text-gray-700"><i class="fa-solid fa-bars text-xl"></i></button>
+      <button data-menu-toggle class="md:hidden text-stone-700"><i class="fa-solid fa-bars text-xl"></i></button>
     </div>
-    <div id="mobile-menu" class="hidden border-t border-gray-200 bg-white md:hidden"><nav class="mx-auto grid max-w-7xl gap-3 px-4 py-4 text-sm sm:px-6"><a href="index.html">Home</a><a href="shop.html" class="font-medium">Shop</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="cart.html">Cart</a></nav></div>
+    <div id="mobile-menu" class="hidden border-t border-emerald-100 bg-stone-50 md:hidden"><nav class="mx-auto grid max-w-7xl gap-3 px-4 py-4 text-sm sm:px-6"><a href="index.html">Home</a><a href="shop.html" class="font-medium">Shop</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="cart.html">Cart</a></nav></div>
   </header>
 
   <main class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-    <h1 class="text-3xl font-semibold">Shop</h1>
+    <h1 class="text-3xl font-semibold text-emerald-950">Shop Plants</h1>
     <div class="mt-8 grid gap-8 lg:grid-cols-4">
-      <aside class="rounded-2xl border border-gray-200 bg-gray-50 p-6">
+      <aside class="rounded-2xl border border-emerald-100 bg-white p-6">
         <h2 class="text-lg font-semibold">Categories</h2>
-        <ul class="mt-4 space-y-3 text-sm text-gray-600">
-          <li><button type="button" data-filter="all" class="shop-filter text-left font-semibold text-black hover:text-black">All</button></li>
-          <li><button type="button" data-filter="men" class="shop-filter text-left hover:text-black">Men</button></li>
-          <li><button type="button" data-filter="women" class="shop-filter text-left hover:text-black">Women</button></li>
-          <li><button type="button" data-filter="accessories" class="shop-filter text-left hover:text-black">Accessories</button></li>
-          <li><button type="button" data-filter="footwear" class="shop-filter text-left hover:text-black">Footwear</button></li>
-          <li><button type="button" data-filter="bags" class="shop-filter text-left hover:text-black">Bags</button></li>
+        <ul class="mt-4 space-y-3 text-sm text-stone-600">
+          <li><button type="button" data-filter="all" class="shop-filter text-left font-semibold text-emerald-900 hover:text-emerald-900">All</button></li>
+          <li><button type="button" data-filter="low-light" class="shop-filter text-left hover:text-emerald-800">Low Light</button></li>
+          <li><button type="button" data-filter="statement" class="shop-filter text-left hover:text-emerald-800">Statement</button></li>
+          <li><button type="button" data-filter="succulents" class="shop-filter text-left hover:text-emerald-800">Succulents</button></li>
+          <li><button type="button" data-filter="pet-friendly" class="shop-filter text-left hover:text-emerald-800">Pet Friendly</button></li>
+          <li><button type="button" data-filter="planters" class="shop-filter text-left hover:text-emerald-800">Planters</button></li>
         </ul>
       </aside>
 
       <section class="lg:col-span-3 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-        <article data-category="men" class="shop-item rounded-2xl border border-gray-200 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=700&q=80" alt="Men T-shirt" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Men T-shirt</h3><p class="text-sm text-gray-500">$35.00</p><button data-add-to-cart data-id="s1" data-title="Men T-shirt" data-price="35" data-image="https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-black px-4 py-2 text-sm text-white transition hover:bg-gray-800">Add to Cart</button></article>
-        <article data-category="women" class="shop-item rounded-2xl border border-gray-200 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=700&q=80" alt="Women Dress" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Women Dress</h3><p class="text-sm text-gray-500">$78.00</p><button data-add-to-cart data-id="s2" data-title="Women Dress" data-price="78" data-image="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-black px-4 py-2 text-sm text-white transition hover:bg-gray-800">Add to Cart</button></article>
-        <article data-category="accessories" class="shop-item rounded-2xl border border-gray-200 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=80" alt="Sunglasses" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Sunglasses</h3><p class="text-sm text-gray-500">$45.00</p><button data-add-to-cart data-id="s3" data-title="Sunglasses" data-price="45" data-image="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-black px-4 py-2 text-sm text-white transition hover:bg-gray-800">Add to Cart</button></article>
-        <article data-category="men" class="shop-item rounded-2xl border border-gray-200 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1595341595379-cf0f9f6ecf5b?auto=format&fit=crop&w=700&q=80" alt="Leather Jacket" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Leather Jacket</h3><p class="text-sm text-gray-500">$130.00</p><button data-add-to-cart data-id="s4" data-title="Leather Jacket" data-price="130" data-image="https://images.unsplash.com/photo-1595341595379-cf0f9f6ecf5b?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-black px-4 py-2 text-sm text-white transition hover:bg-gray-800">Add to Cart</button></article>
-        <article data-category="bags" class="shop-item rounded-2xl border border-gray-200 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80" alt="Handbag" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Handbag</h3><p class="text-sm text-gray-500">$95.00</p><button data-add-to-cart data-id="s5" data-title="Handbag" data-price="95" data-image="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-black px-4 py-2 text-sm text-white transition hover:bg-gray-800">Add to Cart</button></article>
-        <article data-category="footwear" class="shop-item rounded-2xl border border-gray-200 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=700&q=80" alt="Running Shoes" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Running Shoes</h3><p class="text-sm text-gray-500">$110.00</p><button data-add-to-cart data-id="s6" data-title="Running Shoes" data-price="110" data-image="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-black px-4 py-2 text-sm text-white transition hover:bg-gray-800">Add to Cart</button></article>
+        <article data-category="low-light" class="shop-item rounded-2xl border border-emerald-100 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=700&q=80" alt="Snake Plant" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Snake Plant</h3><p class="text-sm text-stone-500">$49.00</p><button data-add-to-cart data-id="s1" data-title="Snake Plant" data-price="49" data-image="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-emerald-800 px-4 py-2 text-sm text-white transition hover:bg-emerald-900">Add to Cart</button></article>
+        <article data-category="pet-friendly" class="shop-item rounded-2xl border border-emerald-100 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1494949360228-4e9bde560065?auto=format&fit=crop&w=700&q=80" alt="Calathea Orbifolia" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Calathea Orbifolia</h3><p class="text-sm text-stone-500">$62.00</p><button data-add-to-cart data-id="s2" data-title="Calathea Orbifolia" data-price="62" data-image="https://images.unsplash.com/photo-1494949360228-4e9bde560065?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-emerald-800 px-4 py-2 text-sm text-white transition hover:bg-emerald-900">Add to Cart</button></article>
+        <article data-category="succulents" class="shop-item rounded-2xl border border-emerald-100 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=700&q=80" alt="Aloe Vera" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Aloe Vera</h3><p class="text-sm text-stone-500">$35.00</p><button data-add-to-cart data-id="s3" data-title="Aloe Vera" data-price="35" data-image="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-emerald-800 px-4 py-2 text-sm text-white transition hover:bg-emerald-900">Add to Cart</button></article>
+        <article data-category="statement" class="shop-item rounded-2xl border border-emerald-100 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=700&q=80" alt="Monstera Deliciosa" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Monstera Deliciosa</h3><p class="text-sm text-stone-500">$69.00</p><button data-add-to-cart data-id="s4" data-title="Monstera Deliciosa" data-price="69" data-image="https://images.unsplash.com/photo-1459156212016-c812468e2115?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-emerald-800 px-4 py-2 text-sm text-white transition hover:bg-emerald-900">Add to Cart</button></article>
+        <article data-category="planters" class="shop-item rounded-2xl border border-emerald-100 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=700&q=80" alt="Ceramic Pot Set" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Ceramic Pot Set</h3><p class="text-sm text-stone-500">$42.00</p><button data-add-to-cart data-id="s5" data-title="Ceramic Pot Set" data-price="42" data-image="https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-emerald-800 px-4 py-2 text-sm text-white transition hover:bg-emerald-900">Add to Cart</button></article>
+        <article data-category="statement" class="shop-item rounded-2xl border border-emerald-100 bg-white p-4 transition hover:-translate-y-1 hover:shadow-lg"><img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=700&q=80" alt="Fiddle Leaf Fig" class="h-64 w-full rounded-xl object-cover"><h3 class="mt-4 font-semibold">Fiddle Leaf Fig</h3><p class="text-sm text-stone-500">$89.00</p><button data-add-to-cart data-id="s6" data-title="Fiddle Leaf Fig" data-price="89" data-image="https://images.unsplash.com/photo-1512428813834-c702c7702b78?auto=format&fit=crop&w=300&q=80" class="mt-4 rounded-lg bg-emerald-800 px-4 py-2 text-sm text-white transition hover:bg-emerald-900">Add to Cart</button></article>
       </section>
     </div>
   </main>
 
-  <footer class="border-t border-gray-200 bg-white"><p class="py-5 text-center text-sm text-gray-500">&copy; 2026 FlairWear. All rights reserved.</p></footer>
+  <footer class="border-t border-emerald-100 bg-white"><p class="py-5 text-center text-sm text-stone-500">&copy; 2026 Leaf & Clay. All rights reserved.</p></footer>
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Social Media Feed</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-stone-50 text-stone-900">
+  <header class="sticky top-0 z-50 border-b border-emerald-100 bg-white/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#" class="text-xl font-bold text-emerald-800">Mini Social</a>
+      <div class="hidden items-center gap-3 md:flex">
+        <input id="global-search" type="search" placeholder="Search users..." class="w-64 rounded-lg border border-emerald-200 px-3 py-2 text-sm outline-none focus:border-emerald-700" />
+        <button id="home-btn" class="rounded-lg border border-emerald-200 px-4 py-2 text-sm hover:bg-emerald-50">Users</button>
+      </div>
+      <button id="mobile-menu-btn" class="md:hidden text-stone-700"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobile-menu" class="hidden border-t border-emerald-100 bg-white md:hidden">
+      <div class="mx-auto flex max-w-7xl items-center gap-3 px-4 py-3 sm:px-6 lg:px-8">
+        <input id="global-search-mobile" type="search" placeholder="Search users..." class="w-full rounded-lg border border-emerald-200 px-3 py-2 text-sm outline-none focus:border-emerald-700" />
+        <button id="home-btn-mobile" class="rounded-lg border border-emerald-200 px-3 py-2 text-sm hover:bg-emerald-50">Users</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <section id="users-page" class="grid gap-6 md:grid-cols-4">
+      <aside class="md:col-span-1">
+        <div class="rounded-2xl border border-emerald-100 bg-white p-4">
+          <h2 class="text-lg font-semibold">Users</h2>
+          <ul id="users-list" class="mt-3 space-y-2 text-sm"></ul>
+        </div>
+      </aside>
+      <section class="md:col-span-3">
+        <div class="rounded-2xl border border-emerald-100 bg-white p-4">
+          <h2 class="text-lg font-semibold">Explore</h2>
+          <div id="users-grid" class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+          <p id="users-empty" class="mt-3 hidden text-sm text-stone-600">No users found.</p>
+        </div>
+      </section>
+    </section>
+
+    <section id="profile-page" class="hidden">
+      <div class="mb-4 flex items-center justify-between">
+        <button id="back-users" class="rounded-lg border border-emerald-200 px-4 py-2 text-sm hover:bg-emerald-50">Back to Users</button>
+        <h1 id="profile-name" class="text-2xl font-semibold text-emerald-950"></h1>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-3">
+        <section class="rounded-2xl border border-emerald-100 bg-white p-5">
+          <h2 class="text-lg font-semibold">Profile</h2>
+          <div id="profile-details" class="mt-3 text-sm text-stone-700"></div>
+        </section>
+        <section class="lg:col-span-2 rounded-2xl border border-emerald-100 bg-white p-5">
+          <h2 class="text-lg font-semibold">Posts</h2>
+          <div class="mt-3 flex flex-wrap items-center gap-3">
+            <input id="posts-search" type="search" placeholder="Search posts..." class="min-w-[220px] flex-1 rounded-lg border border-emerald-200 px-3 py-2 text-sm outline-none focus:border-emerald-700" />
+            <label class="flex items-center gap-2 text-sm text-stone-700">
+              <input id="posts-saved-toggle" type="checkbox" class="rounded border-stone-300" />
+              <span>Saved only</span>
+            </label>
+            <button id="new-post-btn" class="rounded-lg bg-emerald-700 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-800">New Post</button>
+          </div>
+          <div id="posts-list" class="mt-3 space-y-4"></div>
+          <div class="mt-4">
+            <button id="load-more-posts" class="hidden w-full rounded-lg border border-emerald-200 px-4 py-2 text-sm hover:bg-emerald-50">Load More</button>
+          </div>
+        </section>
+      </div>
+
+      <section class="mt-6 rounded-2xl border border-emerald-100 bg-white p-5">
+        <h2 class="text-lg font-semibold">Albums</h2>
+        <div class="mt-3 flex items-center gap-3">
+          <label class="text-sm text-stone-700">Sort:
+            <select id="albums-sort" class="ml-2 rounded-lg border border-emerald-200 px-2 py-1 text-sm">
+              <option value="asc" selected>Title A–Z</option>
+              <option value="desc">Title Z–A</option>
+            </select>
+          </label>
+        </div>
+        <div id="albums-list" class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
+      </section>
+    </section>
+  </main>
+
+  <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/70 p-6">
+    <div class="max-h-[85vh] w-full max-w-5xl overflow-y-auto rounded-2xl bg-white p-4">
+      <div class="flex items-center justify-between">
+        <h3 id="lightbox-title" class="text-lg font-semibold"></h3>
+        <button id="lightbox-close" class="rounded-lg border border-stone-200 px-3 py-1 text-sm hover:bg-stone-50">Close</button>
+      </div>
+      <div id="lightbox-content" class="mt-4 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"></div>
+    </div>
+  </div>
+
+  <div id="post-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 p-4">
+    <div class="w-full max-w-lg rounded-2xl bg-white p-5">
+      <div class="flex items-center justify-between">
+        <h3 class="text-lg font-semibold">Create Post</h3>
+        <button id="post-cancel" class="rounded-lg border border-stone-200 px-3 py-1 text-sm hover:bg-stone-50">Cancel</button>
+      </div>
+      <div class="mt-4 space-y-3">
+        <input id="post-title" type="text" placeholder="Title" class="w-full rounded-lg border border-emerald-200 px-3 py-2 text-sm outline-none focus:border-emerald-700" />
+        <textarea id="post-body" rows="5" placeholder="What's on your mind?" class="w-full rounded-lg border border-emerald-200 px-3 py-2 text-sm outline-none focus:border-emerald-700"></textarea>
+        <button id="post-submit" class="w-full rounded-lg bg-emerald-700 px-4 py-2 text-sm font-medium text-white hover:bg-emerald-800">Publish</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="pointer-events-none fixed bottom-4 right-4 z-50 hidden rounded-lg bg-emerald-800 px-4 py-3 text-sm font-medium text-white shadow-lg"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+:root {
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 400ms var(--ease-out), transform 400ms var(--ease-out);
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
